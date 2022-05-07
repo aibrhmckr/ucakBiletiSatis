@@ -1,6 +1,5 @@
 import BiletAra from "./js/BiletAra";
 import React from "react";
-
 function App() {
   /*
 class sefer{
@@ -113,15 +112,7 @@ const havaalanlari=[
   {value:"Tokat Havalimanı",label:"Tokat Havalimanı"}
   
 ]
-/*
-const [filteredAirport, setFilteredAirport] = useState("Havalimanı");
-const filterChangeHandler = (selectedAirport) => {
-  setFilteredAirport(selectedAirport);
 
-  <BiletAra selected={filteredAirport}
-        onChangeFilter={filterChangeHandler}
-        havalimanlari={havaalanlari}/>
-}*/
   return (
     <div>
       <BiletAra options={havaalanlari}/>
