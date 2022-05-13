@@ -1,11 +1,11 @@
 import "../css/BiletAra.css";
 import React, { useState } from "react";
 import Select from "react-select";
-import {
-  DatePicker,
-  DatePickerComponent,
-} from "@syncfusion/ej2-react-calendars";
+import Ucuslar from "./Ucuslar";
+
+
 const BiletAra = (props) => {
+
   // kaynak=> https://www.npmjs.com/package/react-select , https://react-select.com/home
   const havaalanlari = [
     { value: "Adana Havalimanı", label: "Adana Havalimanı" },
@@ -126,41 +126,37 @@ const BiletAra = (props) => {
   //
   const [havalimani, sethavalimani] = useState(null);
 
-  /* let kalkisHavalimaniSeciliMi;
-      const inisAktiveEt=()=>{
-        kalkisHavalimaniSeciliMi=false;
-      }*/
   const havalimanisec = (event) => {
-    //kalkisHavalimaniSeciliMi=true;
     sethavalimani(event.value);
-    //inisAktiveEt();
   };
+
   const [inisHavalimani, setIHavalimani] = useState(null);
   const inisHavalimaniSec = (event) => {
     setIHavalimani(event.value);
   };
-  //state oluştur
-  const [tarih, setTarih] = useState();
+
+  const [tarih, setTarih] = useState(null);
   const tarihSec = (event) => {
-    console.log(event.target.value);
     setTarih(event.target.value);
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
-
-    const seyehat = {
-      nereden: havalimani,
-      nereye: inisHavalimani,
-      neZaman: tarih,
-    };
-    //props.onSaveExpenseData(expenseData);
+    // props.onSaveExpenseData(expenseData);
   };
+
+
+  const seyehat = {
+    nereden: havalimani,
+    nereye: inisHavalimani,
+    neZaman: tarih,
+  };
+
   return (
     <div>
       <form onSubmit={submitHandler}>
         <label>Nereden</label>
-        <Select onChange={havalimanisec} options={havaalanlari} />
+        <Select  onChange={havalimanisec} options={havaalanlari} />
         <label>Nereye</label>
         <Select onChange={inisHavalimaniSec} options={havaalanlari} />
         <label>Tarih</label>
@@ -170,19 +166,27 @@ const BiletAra = (props) => {
           min="2022-05-06"
           max="2025-12-31"
         ></input>
-        <button
-          type="submit"
-          onClick={() => {
-            console.log(havalimani, " - ", inisHavalimani, " - ", tarih);
-          }}
-        >
+        <button type="submit" onClick={() => {}}>
           Uçak Bileti Bul
         </button>
-        <label>
-          Havalimanı: {havalimani} - {inisHavalimani} - {tarih}
-        </label>
       </form>
+      <Ucuslar asd={seyehat}></Ucuslar>
     </div>
   );
 };
 export default BiletAra;
+/*<label>
+Havalimanı: {havalimani} - {inisHavalimani} - {tarih}
+</label>
+*/
+/*
+<Button
+          variant="contained"
+          onClick={() => {
+            console.log("Seyehat seçildi");
+          }}
+          disabled={Adres1SeciliMi}
+        >
+          Uçak Bileti Bul
+        </Button>
+*/
