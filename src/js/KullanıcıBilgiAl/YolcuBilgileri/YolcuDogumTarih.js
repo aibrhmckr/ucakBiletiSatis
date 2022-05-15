@@ -1,8 +1,9 @@
 const YolcuDogumTarih = () => {
-    
   return (
     <div>
-        <select>
+      {/* Bu sayfada default value tanımla */}
+
+      <select>
         <option value disabled selected hidden>
           Gün
         </option>
@@ -37,8 +38,7 @@ const YolcuDogumTarih = () => {
         <option value="29">29</option>
         <option value="30">30</option>
         <option value="31">31</option>
-
-        </select>
+      </select>
       <select>
         <option value disabled selected hidden>
           Ay

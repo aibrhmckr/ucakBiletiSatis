@@ -122,30 +122,23 @@ const BiletAra = (props) => {
       label: "Zonguldak Çaycuma Havalimanı",
     },
   ];
-  //
-  //const [alan1kontrol, setAlan1Kontrol] = useState(false);
-  //const [alan2kontrol, setAlan2Kontrol] = useState(false);
-  //const [alan3kontrol, setAlan3Kontrol] = useState(false);
 
   const [havalimani, sethavalimani] = useState(null);
   const havalimanisec = (event) => {
     sethavalimani(event.value);
 
-    //setAlan1Kontrol(true); //
   };
 
   const [inisHavalimani, setIHavalimani] = useState(null);
   const inisHavalimaniSec = (event) => {
     setIHavalimani(event.value);
 
-   // setAlan2Kontrol(true); //
   };
 
   const [tarih, setTarih] = useState(null);
   const tarihSec = (event) => {
     setTarih(event.target.value);
 
-    //setAlan3Kontrol(true); //
   };
 
   const submitHandler = (event) => {
@@ -190,7 +183,7 @@ const BiletAra = (props) => {
           
         </form>
         
-        {ucuslarEkrani == true ? (
+        {ucuslarEkrani === true ? (
           <Ucuslar yolculukRota={seyehat}></Ucuslar>
         ) : (
           <form> Sefer arayın </form>
