@@ -2,11 +2,10 @@ import "../css/BiletAra.css";
 import React, { useState } from "react";
 import Select from "react-select";
 import Ucuslar from "./Ucuslar";
-import { render } from "@testing-library/react";
-import { Button, Card } from "@mui/material";
 
 const BiletAra = (props) => {
   // kaynak=> https://www.npmjs.com/package/react-select , https://react-select.com/home
+  //https://mui.com/material-ui
   const havaalanlari = [
     { value: "Adana Havalimanı", label: "Adana Havalimanı" },
     { value: "Adıyaman Havalimanı", label: "Adıyaman Havalimanı" },
@@ -124,25 +123,33 @@ const BiletAra = (props) => {
     },
   ];
   //
-  const [havalimani, sethavalimani] = useState(null);
+  //const [alan1kontrol, setAlan1Kontrol] = useState(false);
+  //const [alan2kontrol, setAlan2Kontrol] = useState(false);
+  //const [alan3kontrol, setAlan3Kontrol] = useState(false);
 
+  const [havalimani, sethavalimani] = useState(null);
   const havalimanisec = (event) => {
     sethavalimani(event.value);
+
+    //setAlan1Kontrol(true); //
   };
 
   const [inisHavalimani, setIHavalimani] = useState(null);
   const inisHavalimaniSec = (event) => {
     setIHavalimani(event.value);
+
+   // setAlan2Kontrol(true); //
   };
 
   const [tarih, setTarih] = useState(null);
   const tarihSec = (event) => {
     setTarih(event.target.value);
+
+    //setAlan3Kontrol(true); //
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
-    // props.onSaveExpenseData(expenseData);
   };
 
   const seyehat = {
@@ -157,41 +164,39 @@ const BiletAra = (props) => {
     console.log(ucuslarEkrani.toString());
   };
 
+  /* if (alan1kontrol && alan2kontrol && alan3kontrol) {
+    setUcuslarEkrani(true);
+    console.log(ucuslarEkrani.toString());
+  }
+*/
   return (
-    <Card sx={{width:750,backgroundColor:'white'}}>
-      <form onSubmit={submitHandler}>
-        <label>Nereden</label>
-        <Select onChange={havalimanisec} options={havaalanlari} />
-        <label>Nereye</label>
-        <Select onChange={inisHavalimaniSec} options={havaalanlari} />
-        <label>Tarih</label>
-        <input
-          onChange={tarihSec}
-          type="date"
-          min="2022-05-06"
-          max="2025-12-31"
-        ></input>
-        <button type="submit" onClick={ucuslarEkraniGoster}>
-          Uçak Bileti Bul
-        </button>
-      </form>
-      <Ucuslar yolculukRota={seyehat}></Ucuslar>
-    </Card>
+    
+      <div>
+        <form onSubmit={submitHandler}>
+          <label>Nereden</label>
+          <Select onChange={havalimanisec} options={havaalanlari} />
+          <label>Nereye</label>
+          <Select onChange={inisHavalimaniSec} options={havaalanlari} />
+          <label>Tarih</label>
+          <input
+            onChange={tarihSec}
+            type="date"
+            min="2022-05-06"
+            max="2025-12-31"
+          ></input>
+          <button type="submit" onClick={ucuslarEkraniGoster}>
+            Uçak Bileti Bul
+          </button>
+          
+        </form>
+        
+        {ucuslarEkrani == true ? (
+          <Ucuslar yolculukRota={seyehat}></Ucuslar>
+        ) : (
+          <form> Sefer arayın </form>
+        )}
+      </div>
+   
   );
 };
 export default BiletAra;
-/*<label>
-Havalimanı: {havalimani} - {inisHavalimani} - {tarih}
-</label>
-*/
-/*
-<Button
-          variant="contained"
-          onClick={() => {
-            console.log("Seyehat seçildi");
-          }}
-          disabled={Adres1SeciliMi}
-        >
-          Uçak Bileti Bul
-        </Button>
-*/

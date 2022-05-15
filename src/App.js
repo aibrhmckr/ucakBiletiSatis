@@ -1,21 +1,14 @@
 import BiletAra from "./js/BiletAra";
 import React from "react";
+import IletisimBilgileri from "./js/KullanıcıBilgiAl/IletisimBilgileri/IletisimBilgileri";
+import YolcuBilgileri from "./js/KullanıcıBilgiAl/YolcuBilgileri/YolcuBilgileri";
 function App() {
-  /*
-class sefer{
-  constructor(PNR,Marka,KSaati,ISaati,KHavaalani,IHavaalani,Fiyat){
-    this.PNR=PNR;
-    this.Marka=Marka;
-    this.KSaati=KSaati;
-    this.ISaati=ISaati;
-    this.KHavaalani=KHavaalani;
-    this.IHavaalani=IHavaalani;
-    this.Fiyat=Fiyat;
-  }
-}*/
   return (
     <div>
-      <BiletAra/>
+      <BiletAra />
+      <IletisimBilgileri/>
+      <YolcuBilgileri/>
+
     </div>
   );
 }
