@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+//import React, { useState } from "react";
 import NumberFormat from "react-number-format";
 
 const ReactPhone = () => {
-  const [value, setvalue] = useState();
+ // const [value, setvalue] = useState();
   return (
     <div>
       <NumberFormat

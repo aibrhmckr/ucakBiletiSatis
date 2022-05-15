@@ -1,11 +1,13 @@
-const CinsiyetRadioButton = () => {
+const CinsiyetRadioButton = (props) => {
+
   return (
+
     <div>
       <form>
         <input type="radio" id="erkek" name="cinsiyet" value="erkek" />
-        <label for="erkek">Erkek</label>
+        <label htmlFor="erkek">Erkek</label>
         <input type="radio" id="kadın" name="cinsiyet" value="kadın" />
-        <label for="kadın">Kadın</label>
+        <label htmlFor="kadın">Kadın</label>
       </form>
     </div>
   );

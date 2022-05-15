@@ -1,12 +1,15 @@
-const YolcuDogumTarih = () => {
+const YolcuDogumTarih = (props) => {
+
   return (
     <div>
       {/* Bu sayfada default value tanımla */}
-
-      <select>
-        <option value disabled selected hidden>
+      <label>Doğum Tarihiniz</label>
+      <select >
+        <option value disabled>
+          {/*selected vardı ama sildik*/}
           Gün
         </option>
+
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -40,7 +43,7 @@ const YolcuDogumTarih = () => {
         <option value="31">31</option>
       </select>
       <select>
-        <option value disabled selected hidden>
+        <option value disabled>
           Ay
         </option>
         <option value="1">Ocak</option>
@@ -58,7 +61,7 @@ const YolcuDogumTarih = () => {
       </select>
 
       <select>
-        <option value disabled selected hidden>
+        <option value disabled>
           Yıl
         </option>
         <option value="2010"> 2010</option>
