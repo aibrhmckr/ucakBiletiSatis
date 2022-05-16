@@ -2,6 +2,8 @@ import "../css/BiletAra.css";
 import React, { useState } from "react";
 import Select from "react-select";
 import Ucuslar from "./Ucuslar";
+import { FlatList } from 'react'
+;import { Box } from "@mui/material";
 
 const BiletAra = (props) => {
   // kaynak=> https://www.npmjs.com/package/react-select , https://react-select.com/home
@@ -126,19 +128,16 @@ const BiletAra = (props) => {
   const [havalimani, sethavalimani] = useState(null);
   const havalimanisec = (event) => {
     sethavalimani(event.value);
-
   };
 
   const [inisHavalimani, setIHavalimani] = useState(null);
   const inisHavalimaniSec = (event) => {
     setIHavalimani(event.value);
-
   };
 
   const [tarih, setTarih] = useState(null);
   const tarihSec = (event) => {
     setTarih(event.target.value);
-
   };
 
   const submitHandler = (event) => {
@@ -150,7 +149,6 @@ const BiletAra = (props) => {
     nereye: inisHavalimani,
     neZaman: tarih,
   };
-
   const [ucuslarEkrani, setUcuslarEkrani] = useState(false);
   const ucuslarEkraniGoster = (event) => {
     setUcuslarEkrani(true);
@@ -163,8 +161,8 @@ const BiletAra = (props) => {
   }
 */
   return (
-    
-      <div>
+ 
+      <Box>
         <form onSubmit={submitHandler}>
           <label>Nereden</label>
           <Select onChange={havalimanisec} options={havaalanlari} />
@@ -180,16 +178,16 @@ const BiletAra = (props) => {
           <button type="submit" onClick={ucuslarEkraniGoster}>
             Uçak Bileti Bul
           </button>
-          
         </form>
-        
+
         {ucuslarEkrani === true ? (
           <Ucuslar yolculukRota={seyehat}></Ucuslar>
         ) : (
           <form> Sefer arayın </form>
         )}
-      </div>
-   
+
+      </Box>
+
   );
 };
 export default BiletAra;
