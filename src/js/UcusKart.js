@@ -1,21 +1,31 @@
-import { Card } from "@mui/material";
+import { Card, Dialog } from "@mui/material";
+import Koltuklar from "./Ucak/koltuklar"
 const UcusKart = (props) => {
   //console.log(props.nereden)
   //console.log(props.yolculukRota.nereden);
+const kartlar=[];
+props.ucusSeferleri.map((sefer)=>kartlar.push(<Kart yolculukRota={sefer}/>))
 
   return (
-    <Card sx={{margin:0.3, backgroundColor: "lightgreen",border_radius: 35}}>
+    <div>
+      {kartlar}
+    </div>
+    
+  );
+};
+
+function Kart(props){
+return(
+  <Card>
       <div>
         <div>
-          {props.yolculukRota.Nereden}
-          &#8594; {props.yolculukRota.Nereye}
+          {props.yolculukRota.KHavaalani}
+          &#8594; {props.yolculukRota.IHavaalani}
         </div>
         <div>19:30 &#8594; 21:05</div>
       </div>
-      <button type="submit" onClick={() => {}}>
-        Seç
-      </button>
+      <Koltuklar/>
     </Card>
-  );
+);
 };
 export default UcusKart;

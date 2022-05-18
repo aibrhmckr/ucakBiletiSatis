@@ -1,0 +1,16 @@
+.koltuk{
+    background-image: url(./chair-cinema-movie-seat-theater-icon-68620\ kopya.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: fit-content;
+    height: fit-content;
+    padding: 48px;
+    width: 20px;
+    text-align: left;
+}
+.lar{
+    display: flex;
+    flex-direction: row;
+
+}

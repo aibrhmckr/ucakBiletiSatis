@@ -4,6 +4,7 @@ import Select from "react-select";
 import Ucuslar from "./Ucuslar";
 import { FlatList } from 'react'
 ;import { Box } from "@mui/material";
+import ScrollDialog from "./Ucak/koltuklar";
 
 const BiletAra = (props) => {
   // kaynak=> https://www.npmjs.com/package/react-select , https://react-select.com/home
@@ -178,6 +179,7 @@ const BiletAra = (props) => {
           <button type="submit" onClick={ucuslarEkraniGoster}>
             Uçak Bileti Bul
           </button>
+          <ScrollDialog></ScrollDialog>
         </form>
 
         {ucuslarEkrani === true ? (

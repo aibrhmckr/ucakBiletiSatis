@@ -18,11 +18,7 @@ const YolcuBilgileri = () => {
   const TCKaydet = (event) => {
     setTcKimlik(event.target.value);
   };
-
-  const [TcVatandsi, setTcVatandasi] = useState(false);
-  const vatandaslikAyarla = (event) => {
-    setTcVatandasi(true);
-  }; /*
+ /*
     Not tc kimlik alanını devre dışı bırakmak için 
     bu state oluşturuldu ancak checkboxa
     tekrar tıklanıldığında input 
@@ -30,9 +26,9 @@ const YolcuBilgileri = () => {
   */
 
   const [cinsiyetSec, setCinsiyetSec] = useState(false);
-  const cinsiyetSecim=()=>{
+  const cinsiyetSecim = () => {
     setCinsiyetSec(true);
-  }
+  };
 
   console.log(ad, soyad, tcKimilk);
   return (
@@ -46,27 +42,20 @@ const YolcuBilgileri = () => {
         <div>Soyadınız</div>
         <TextField size="small" variant="outlined" onChange={soyadKaydet} />
       </div>
-      <YolcuDogumTarih></YolcuDogumTarih>
+      <div>
+        <input type="date"></input>
+      </div>
       {/* alt Kimlik Numarası alınan bölüm*/}
       <div>
         <div>TC Kimlik No</div>
         <input
-          disabled={TcVatandsi}
           type="text"
           pattern="[0-9]*"
           inputMode="numeric"
           maxLength="11"
           onChange={TCKaydet}
         ></input>
-        <div>
-          <input
-            onChange={vatandaslikAyarla}
-            type="checkbox"
-            id="TtcAlan1"
-            name="TtcAlan1"
-          ></input>
-          <label htmlFor="TcAlan1"> T.C. Vatandaşı Değilim</label>
-        </div>
+
       </div>
       {/* üst */}
       <CinsiyetRadioButton></CinsiyetRadioButton>

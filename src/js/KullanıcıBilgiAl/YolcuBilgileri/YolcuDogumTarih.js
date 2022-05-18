@@ -126,6 +126,7 @@ const YolcuDogumTarih = (props) => {
         <option value="1951"> 1951</option>
         <option value="1950"> 1950</option>
       </select>
+      <input type="date"></input>
     </div>
   );
 };
