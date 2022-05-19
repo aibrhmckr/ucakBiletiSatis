@@ -9,21 +9,28 @@ const IletisimBilgileri = (props) => {
 
   return (
     <div className="bruh">
-      <Card variant="outlined" >
-        <div>
-          <h3>İletişim Bilgileri</h3>
+      <div>
+        <h3>İletişim Bilgileri</h3>
+        <div className="iletisim-bilgileri">
           <div>
-            <div>E-posta adresiniz</div>
+            <b>
+              <div>E-posta adresiniz</div>
+            </b>
             <TextField size="small" variant="outlined" />
           </div>
-          <div>
-            <div>Cep Telefonunuz</div>
+          <div className="cep-telefonu">
+            <b>
+              <div>Cep Telefonunuz</div>
+            </b>
             <ReactPhone></ReactPhone>
           </div>
+        </div>
+
+        <small>
           Uçuş ve bilet bilgilerinizi e-posta ve ücretsiz SMS yoluyla
           ileteceğiz.
-        </div>
-      </Card>
+        </small>
+      </div>
     </div>
   );
 };

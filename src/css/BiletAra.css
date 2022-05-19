@@ -1,1 +1,34 @@
 @import  url("https://cdn.syncfusion.com/ej2/material.css");
+.rota{
+    display: flex;
+    flex-direction: row;
+}
+.yer{
+    width: 350px;
+    margin: 5px;
+}
+.tarih{
+    width: 350px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 5px;
+    
+}
+.bilet-bul{
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    width: 350px;
+    height: 40px;
+    margin-top: 28.5px;
+    margin-left: 5px;
+}
+.tarih-takvim{
+    display: flex;
+    flex-direction: column;
+}
+.tarih-bilet{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}

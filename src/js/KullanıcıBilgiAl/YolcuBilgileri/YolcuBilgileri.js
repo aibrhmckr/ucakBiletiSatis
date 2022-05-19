@@ -18,7 +18,7 @@ const YolcuBilgileri = () => {
   const TCKaydet = (event) => {
     setTcKimlik(event.target.value);
   };
- /*
+  /*
     Not tc kimlik alanını devre dışı bırakmak için 
     bu state oluşturuldu ancak checkboxa
     tekrar tıklanıldığında input 
@@ -32,7 +32,7 @@ const YolcuBilgileri = () => {
 
   console.log(ad, soyad, tcKimilk);
   return (
-    <Card variant="outlined">
+    <div>
       <h3>Yolcu Bilgileri</h3>
       <div>
         <div>Adınız</div>
@@ -55,11 +55,10 @@ const YolcuBilgileri = () => {
           maxLength="11"
           onChange={TCKaydet}
         ></input>
-
       </div>
       {/* üst */}
       <CinsiyetRadioButton></CinsiyetRadioButton>
-    </Card>
+    </div>
   );
 };
 export default YolcuBilgileri;

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import UcusKart from "./UcusKart";
+import "../css/Ucuslar.css"
 
 const Ucuslar = (props) => {
   const PegasusAirlines = [
@@ -178,6 +179,56 @@ const Ucuslar = (props) => {
       InisTarih: new Date(2022, 5, 12, 21, 5),
       KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
       IHavaalani: "Ordu - Giresun Havalimanı",
+      Fiyat: 639.98,
+      KoltukSayisi: 258,
+      Bagaj: 15,
+    },
+    {
+      Marka: ucusFirmaUcaklar[0].Marka,
+      KalkisTarih: "2022-05-18",
+      InisTarih: new Date(2022, 5, 12, 21, 5),
+      KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
+      IHavaalani: "Ordu - Giresun Havalimanı",
+      Fiyat: 639.98,
+      KoltukSayisi: 258,
+      Bagaj: 15,
+    },
+    {
+      Marka: ucusFirmaUcaklar[0].Marka,
+      KalkisTarih: "2022-05-18",
+      InisTarih: new Date(2022, 5, 12, 21, 5),
+      KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
+      IHavaalani: "Ordu - Giresun Havalimanı",
+      Fiyat: 639.98,
+      KoltukSayisi: 258,
+      Bagaj: 15,
+    },
+    {
+      Marka: ucusFirmaUcaklar[0].Marka,
+      KalkisTarih: "2022-05-18",
+      InisTarih: new Date(2022, 5, 12, 21, 5),
+      KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
+      IHavaalani: "Ordu - Giresun Havalimanı",
+      Fiyat: 639.98,
+      KoltukSayisi: 258,
+      Bagaj: 15,
+    },
+    {
+      Marka: ucusFirmaUcaklar[0].Marka,
+      KalkisTarih: "2022-05-18",
+      InisTarih: new Date(2022, 5, 12, 21, 5),
+      KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
+      IHavaalani: "Ordu - Giresun Havalimanı",
+      Fiyat: 639.98,
+      KoltukSayisi: 258,
+      Bagaj: 15,
+    },
+    {
+      Marka: ucusFirmaUcaklar[0].Marka,
+      KalkisTarih: "2022-05-18",
+      InisTarih: new Date(2022, 5, 12, 21, 5),
+      KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
+      IHavaalani: "Ordu - Giresun Havalimanı",
       Fiyat: 669.98,
       KoltukSayisi: 258,
       Bagaj: 15,
@@ -234,7 +285,7 @@ const secili=[];
   };
 */
   return (
-    <div>
+    <div className="ucus-liste">
       <UcusKart ucusSeferleri={secili}></UcusKart>
     </div>
   );

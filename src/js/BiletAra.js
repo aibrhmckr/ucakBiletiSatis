@@ -2,8 +2,8 @@ import "../css/BiletAra.css";
 import React, { useState } from "react";
 import Select from "react-select";
 import Ucuslar from "./Ucuslar";
-import { FlatList } from 'react'
-;import { Box } from "@mui/material";
+import { FlatList } from "react";
+import { Box } from "@mui/material";
 import ScrollDialog from "./Ucak/koltuklar";
 
 const BiletAra = (props) => {
@@ -156,40 +156,65 @@ const BiletAra = (props) => {
     console.log(ucuslarEkrani.toString());
   };
 
-  /* if (alan1kontrol && alan2kontrol && alan3kontrol) {
-    setUcuslarEkrani(true);
-    console.log(ucuslarEkrani.toString());
-  }
-*/
   return (
- 
-      <Box>
-        <form onSubmit={submitHandler}>
-          <label>Nereden</label>
-          <Select onChange={havalimanisec} options={havaalanlari} />
-          <label>Nereye</label>
-          <Select onChange={inisHavalimaniSec} options={havaalanlari} />
-          <label>Tarih</label>
-          <input
-            onChange={tarihSec}
-            type="date"
-            min="2022-05-06"
-            max="2025-12-31"
-          ></input>
-          <button type="submit" onClick={ucuslarEkraniGoster}>
-            Uçak Bileti Bul
+    <Box>
+      <form onSubmit={submitHandler}>
+        <div className="rota">
+          <div>
+            <b>
+              <label>Nereden</label>
+            </b>
+            <Select
+              className="yer"
+              onChange={havalimanisec}
+              options={havaalanlari}
+            />
+          </div>
+
+          <div>
+            <b>
+              <label>Nereye</label>
+            </b>
+            <Select
+              className="yer"
+              onChange={inisHavalimaniSec}
+              options={havaalanlari}
+            />
+          </div>
+        </div>
+        <div className="tarih-bilet">
+          <div className="tarih-takvim">
+            <b>
+              <label>Tarih</label>
+            </b>
+            <input
+              className="tarih"
+              onChange={tarihSec}
+              type="date"
+              min="2022-05-06"
+              max="2025-12-31"
+              defaultValue={"2022-06-01"}
+            ></input>
+          </div>
+
+          <button
+            className="bilet-bul"
+            type="submit"
+            onClick={ucuslarEkraniGoster}
+          >
+            Uçak Bileti Bul &#8594;
           </button>
-          <ScrollDialog></ScrollDialog>
-        </form>
+        </div>
 
-        {ucuslarEkrani === true ? (
-          <Ucuslar yolculukRota={seyehat}></Ucuslar>
-        ) : (
-          <form> Sefer arayın </form>
-        )}
+        <ScrollDialog></ScrollDialog>
+      </form>
 
-      </Box>
-
+      {ucuslarEkrani === true ? (
+        <Ucuslar yolculukRota={seyehat}></Ucuslar>
+      ) : (
+        <form> Sefer arayın </form>
+      )}
+    </Box>
   );
 };
 export default BiletAra;

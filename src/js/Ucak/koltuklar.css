@@ -14,3 +14,21 @@
     flex-direction: row;
 
 }
+.koltuk_sira{
+    display: grid;
+    gap: 48px;
+    grid-template-columns: auto auto auto;
+}
+.kenar{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+}
+.pencere{
+    bottom: 0;
+    top: 0;
+    color: black;
+    background-color: aqua;
+    text-align: center;
+    padding: 5px;
+}

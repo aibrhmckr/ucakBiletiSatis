@@ -8,6 +8,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import "./koltuklar.css";
 import Koltuk from "./Koltuk";
 import UcluKoltuk from "./UcluKoltuk";
+import { Box } from "@mui/system";
 
 export default function ScrollDialog() {
   const [open, setOpen] = React.useState(false);
@@ -33,7 +34,7 @@ export default function ScrollDialog() {
   }, [open]);
   const temp = [];
   let temp2 =[];
-  for(let i=1;i<301;i++){
+  for(let i=1;i<101;i++){
   
     temp2.push(<Koltuk numara={i}></Koltuk>)
     if (i%4===0){
@@ -50,7 +51,8 @@ export default function ScrollDialog() {
     <div>
       <Button onClick={handleClickOpen("paper")}>Koltuk Seç</Button>
 
-      <Dialog
+      <Dialog 
+      maxWidth="xl  "
         open={open}
         onClose={handleClose}
         scroll={scroll}
@@ -59,7 +61,15 @@ export default function ScrollDialog() {
       >
         <DialogTitle id="scroll-dialog-title">Koltuk Seç</DialogTitle>
         <DialogContent dividers={scroll === "paper"}>
-            <UcluKoltuk koltukt={temp}></UcluKoltuk>
+
+            <div className="kenar">
+                <div className="pencere">Sol</div>
+            <div className="koltuk_sira">
+                {temp}
+            </div>
+            <div className="pencere">Sağ</div>
+            </div>
+
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>İptal Et</Button>
