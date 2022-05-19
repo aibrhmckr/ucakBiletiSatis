@@ -1,6 +1,7 @@
 .bruh {
  
   border-radius: 7px;
+  border: 1px solid grey;
   box-shadow: 1.5px 1.5px 0px #888888;
   margin-bottom: 8px;
   padding: 4px;
@@ -8,4 +9,14 @@
 .iletisim-bilgileri{
     display: flex;
     flex-direction: row;
+}
+.eposta{
+  margin-right: 5px;
+}
+.eposta-field{
+  width: 350px;
+}
+
+.cep-telefonu{
+margin-left: 5px;
 }

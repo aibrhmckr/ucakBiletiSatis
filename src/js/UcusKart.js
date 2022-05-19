@@ -1,4 +1,3 @@
-import { Card, Dialog } from "@mui/material";
 import Koltuklar from "./Ucak/koltuklar";
 import "../css/UcusKart.css"
 const UcusKart = (props) => {

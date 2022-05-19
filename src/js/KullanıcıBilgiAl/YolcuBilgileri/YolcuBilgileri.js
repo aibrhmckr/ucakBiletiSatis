@@ -1,8 +1,7 @@
 import { Card, TextField } from "@mui/material";
 import { useState } from "react";
 import CinsiyetRadioButton from "./CinsiyetRadioButton";
-import YolcuDogumTarih from "./YolcuDogumTarih";
-
+import "./YolcuBilgileri.css";
 const YolcuBilgileri = () => {
   const [ad, setAd] = useState(null);
   const adKaydet = (event) => {
@@ -32,31 +31,61 @@ const YolcuBilgileri = () => {
 
   console.log(ad, soyad, tcKimilk);
   return (
-    <div>
+    <div className="yolcu-bilgileri">
       <h3>Yolcu Bilgileri</h3>
-      <div>
-        <div>Adınız</div>
-        <TextField size="small" variant="outlined" onChange={adKaydet} />
+      <div className="ad-soyad">
+        <div className="ad">
+          <b>
+            <div>Adınız</div>
+          </b>
+          <TextField
+            size="small"
+            variant="outlined"
+            onChange={adKaydet}
+            className="kisi__ad-soyad"
+          />
+        </div>
+        <div className="soyad">
+          <b>
+            <div>Soyadınız</div>
+          </b>
+          <TextField
+            size="small"
+            variant="outlined"
+            onChange={soyadKaydet}
+            className="kisi__ad-soyad"
+          />
+        </div>
       </div>
-      <div>
-        <div>Soyadınız</div>
-        <TextField size="small" variant="outlined" onChange={soyadKaydet} />
+
+      <div className="dogum-kimlik">
+        {/* alt Kimlik Numarası alınan bölüm*/}
+        <div>
+          <b>
+            <div>Doğum Tarihi</div>
+          </b>
+          <input type="date" className="tarih"></input>
+        </div>
+
+        <div>
+          <b>
+            <div>TC Kimlik No</div>
+          </b>
+          <input
+            className="tc-kimlik"
+            type="text"
+            pattern="[0-9]*"
+            inputMode="numeric"
+            maxLength="11"
+            onChange={TCKaydet}
+          ></input>
+        </div>
+        {/* üst */}
       </div>
-      <div>
-        <input type="date"></input>
-      </div>
-      {/* alt Kimlik Numarası alınan bölüm*/}
-      <div>
-        <div>TC Kimlik No</div>
-        <input
-          type="text"
-          pattern="[0-9]*"
-          inputMode="numeric"
-          maxLength="11"
-          onChange={TCKaydet}
-        ></input>
-      </div>
-      {/* üst */}
+
+      <b>
+        <div>Cinsiyet</div>
+      </b>
       <CinsiyetRadioButton></CinsiyetRadioButton>
     </div>
   );

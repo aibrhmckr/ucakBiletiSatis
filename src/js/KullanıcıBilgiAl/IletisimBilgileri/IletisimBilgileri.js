@@ -12,11 +12,11 @@ const IletisimBilgileri = (props) => {
       <div>
         <h3>İletişim Bilgileri</h3>
         <div className="iletisim-bilgileri">
-          <div>
+          <div className="eposta">
             <b>
               <div>E-posta adresiniz</div>
             </b>
-            <TextField size="small" variant="outlined" />
+            <TextField size="small" variant="outlined" className="eposta-field"/>
           </div>
           <div className="cep-telefonu">
             <b>
@@ -27,7 +27,7 @@ const IletisimBilgileri = (props) => {
         </div>
 
         <small>
-          Uçuş ve bilet bilgilerinizi e-posta ve ücretsiz SMS yoluyla
+          *Uçuş ve bilet bilgilerinizi e-posta ve ücretsiz SMS yoluyla
           ileteceğiz.
         </small>
       </div>

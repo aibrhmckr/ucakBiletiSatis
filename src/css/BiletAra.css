@@ -1,4 +1,11 @@
 @import  url("https://cdn.syncfusion.com/ej2/material.css");
+.bilet-ara{
+    border-radius: 7px;
+    border: 1px solid grey;
+    box-shadow: 1.5px 1.5px 0px #888888;
+    margin-bottom: 8px;
+    padding: 4px;
+}
 .rota{
     display: flex;
     flex-direction: row;

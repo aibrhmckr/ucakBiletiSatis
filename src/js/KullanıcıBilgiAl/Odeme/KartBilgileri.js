@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "react-credit-cards";
-
+import "./KartInput.css"
 
 import {
   formatCreditCardNumber,
@@ -100,12 +100,13 @@ export default class KartBilgileri extends React.Component {
                 onFocus={this.handleInputFocus}
               />
             </div>
+            
             <div className="row">
               <div className="col-6">
                 <input
                   type="tel"
                   name="expiry"
-                  className="form-control"
+                  className="form-controlxs"
                   placeholder="Son Kullanım Tarihi"
                   pattern="\d\d/\d\d"
                   required
@@ -117,7 +118,7 @@ export default class KartBilgileri extends React.Component {
                 <input
                   type="tel"
                   name="cvc"
-                  className="form-control"
+                  className="form-controlxc"
                   placeholder="CVC"
                   pattern="\d{3,4}"
                   required
@@ -128,7 +129,7 @@ export default class KartBilgileri extends React.Component {
             </div>
             <input type="hidden" name="issuer" value={issuer} />
             <div className="form-actions">
-              <button className="btn btn-primary btn-block">Ödeme</button>
+              <button className="btnode">Ödeme <b className="ok">&#8594;</b></button>
             </div>
           </form>
           {formData && (

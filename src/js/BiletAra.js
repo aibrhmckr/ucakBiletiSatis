@@ -157,7 +157,7 @@ const BiletAra = (props) => {
   };
 
   return (
-    <Box>
+    <div className="bilet-ara">
       <form onSubmit={submitHandler}>
         <div className="rota">
           <div>
@@ -206,7 +206,7 @@ const BiletAra = (props) => {
           </button>
         </div>
 
-        <ScrollDialog></ScrollDialog>
+       {/* <ScrollDialog></ScrollDialog> */}
       </form>
 
       {ucuslarEkrani === true ? (
@@ -214,7 +214,7 @@ const BiletAra = (props) => {
       ) : (
         <form> Sefer arayın </form>
       )}
-    </Box>
+    </div>
   );
 };
 export default BiletAra;
