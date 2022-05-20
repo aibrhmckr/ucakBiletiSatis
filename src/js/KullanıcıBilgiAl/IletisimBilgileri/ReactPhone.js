@@ -1,7 +1,7 @@
 //import React, { useState } from "react";
 import NumberFormat from "react-number-format";
 import "./ReactPhone.css"
-const ReactPhone = () => {
+const ReactPhone = (props) => {
   // const [value, setvalue] = useState();
   return (
     <div>
@@ -10,6 +10,7 @@ const ReactPhone = () => {
         format="+90 (###) ### ## ##"
         allowEmptyFormatting
         mask="_"
+        onValueChange={props.telNo}
       />
     </div>
   );

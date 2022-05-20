@@ -1,4 +1,4 @@
-import { Card, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 import { useState } from "react";
 import CinsiyetRadioButton from "./CinsiyetRadioButton";
 import "./YolcuBilgileri.css";
@@ -17,19 +17,19 @@ const YolcuBilgileri = () => {
   const TCKaydet = (event) => {
     setTcKimlik(event.target.value);
   };
-  /*
-    Not tc kimlik alanını devre dışı bırakmak için 
-    bu state oluşturuldu ancak checkboxa
-    tekrar tıklanıldığında input 
-    tekrar devreye girmiyor, düzelt
-  */
 
-  const [cinsiyetSec, setCinsiyetSec] = useState(false);
+ /* const [cinsiyetSec, setCinsiyetSec] = useState(false);
   const cinsiyetSecim = () => {
     setCinsiyetSec(true);
+  };*/
+
+
+  const [dogumT, setDogumT] = useState(null);
+  const dogumTarihiKaydet = (event) => {
+    setDogumT(event.target.value);
   };
 
-  console.log(ad, soyad, tcKimilk);
+  console.log(ad, soyad, tcKimilk, dogumT);
   return (
     <div className="yolcu-bilgileri">
       <h3>Yolcu Bilgileri</h3>
@@ -64,7 +64,12 @@ const YolcuBilgileri = () => {
           <b>
             <div>Doğum Tarihi</div>
           </b>
-          <input type="date" className="tarih"></input>
+          <input
+            type="date"
+            className="tarih"
+            onChange={dogumTarihiKaydet}
+            defaultValue="2000-07-09"
+          ></input>
         </div>
 
         <div>
@@ -86,7 +91,7 @@ const YolcuBilgileri = () => {
       <b>
         <div>Cinsiyet</div>
       </b>
-      <CinsiyetRadioButton></CinsiyetRadioButton>
+      <CinsiyetRadioButton ></CinsiyetRadioButton>
     </div>
   );
 };

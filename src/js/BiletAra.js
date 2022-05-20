@@ -2,9 +2,7 @@ import "../css/BiletAra.css";
 import React, { useState } from "react";
 import Select from "react-select";
 import Ucuslar from "./Ucuslar";
-import { FlatList } from "react";
-import { Box } from "@mui/material";
-import ScrollDialog from "./Ucak/koltuklar";
+
 
 const BiletAra = (props) => {
   // kaynak=> https://www.npmjs.com/package/react-select , https://react-select.com/home
@@ -153,7 +151,7 @@ const BiletAra = (props) => {
   const [ucuslarEkrani, setUcuslarEkrani] = useState(false);
   const ucuslarEkraniGoster = (event) => {
     setUcuslarEkrani(true);
-    console.log(ucuslarEkrani.toString());
+    //console.log(ucuslarEkrani.toString());
   };
 
   return (

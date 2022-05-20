@@ -3,11 +3,28 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: fit-content;
+    width: 55px;
+    height: 55px;
+    padding: 35px;
+    width: 20px;
+    text-align: left;
+}/*
+ background-image: url(./chair-cinema-movie-seat-theater-icon-68620\ kopya.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   width: fit-content;
     height: fit-content;
     padding: 48px;
     width: 20px;
-    text-align: left;
+ text-align: left;
+
+ width: 100px;
+    padding: 15px;
+    width: 20px;
+*/
+.koltuk-numara{
+    color: white;
 }
 .lar{
     display: flex;
@@ -32,3 +49,4 @@
     text-align: center;
     padding: 5px;
 }
+

@@ -3,7 +3,6 @@ import React from "react";
 import IletisimBilgileri from "./js/KullanıcıBilgiAl/IletisimBilgileri/IletisimBilgileri";
 import YolcuBilgileri from "./js/KullanıcıBilgiAl/YolcuBilgileri/YolcuBilgileri";
 import Box from '@mui/material/Box';
-import { Card } from "react-bootstrap";
 import KartBilgileri from "./js/KullanıcıBilgiAl/Odeme/KartBilgileri";
 
 function App() {

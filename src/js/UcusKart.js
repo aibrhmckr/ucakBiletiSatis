@@ -20,7 +20,7 @@ function Kart(props) {
           {props.yolculukRota.KHavaalani}
           &#8594; {props.yolculukRota.IHavaalani}
         </div>
-        <div>19:30 &#8594; 21:05</div>
+        <div>{props.yolculukRota.KSaat} &#8594; {props.yolculukRota.ISaat}</div>
       </div>
       <Koltuklar />
     </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import UcusKart from "./UcusKart";
-import "../css/Ucuslar.css"
+import "../css/Ucuslar.css";
 
 const Ucuslar = (props) => {
   const PegasusAirlines = [
@@ -166,7 +166,9 @@ const Ucuslar = (props) => {
     {
       Marka: ucusFirmaUcaklar[0].Marka,
       KalkisTarih: "2022-05-18",
-      InisTarih: new Date(2022, 5, 12, 21, 5),
+      InisTarih: "2022-05-18",
+      KSaat: "07:30",
+      ISaat: "09:30",
       KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
       IHavaalani: "Ordu - Giresun Havalimanı",
       Fiyat: 639.98,
@@ -174,116 +176,69 @@ const Ucuslar = (props) => {
       Bagaj: 15,
     },
     {
-      Marka: ucusFirmaUcaklar[0].Marka,
+      Marka: ucusFirmaUcaklar[1].Marka,
       KalkisTarih: "2022-05-18",
-      InisTarih: new Date(2022, 5, 12, 21, 5),
+      InisTarih: "2022-05-18",
+      KSaat: "09:00",
+      ISaat: "10:30",
       KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
       IHavaalani: "Ordu - Giresun Havalimanı",
       Fiyat: 639.98,
-      KoltukSayisi: 258,
-      Bagaj: 15,
-    },
-    {
-      Marka: ucusFirmaUcaklar[0].Marka,
-      KalkisTarih: "2022-05-18",
-      InisTarih: new Date(2022, 5, 12, 21, 5),
-      KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
-      IHavaalani: "Ordu - Giresun Havalimanı",
-      Fiyat: 639.98,
-      KoltukSayisi: 258,
-      Bagaj: 15,
-    },
-    {
-      Marka: ucusFirmaUcaklar[0].Marka,
-      KalkisTarih: "2022-05-18",
-      InisTarih: new Date(2022, 5, 12, 21, 5),
-      KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
-      IHavaalani: "Ordu - Giresun Havalimanı",
-      Fiyat: 639.98,
-      KoltukSayisi: 258,
-      Bagaj: 15,
-    },
-    {
-      Marka: ucusFirmaUcaklar[0].Marka,
-      KalkisTarih: "2022-05-18",
-      InisTarih: new Date(2022, 5, 12, 21, 5),
-      KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
-      IHavaalani: "Ordu - Giresun Havalimanı",
-      Fiyat: 639.98,
-      KoltukSayisi: 258,
-      Bagaj: 15,
-    },
-    {
-      Marka: ucusFirmaUcaklar[0].Marka,
-      KalkisTarih: "2022-05-18",
-      InisTarih: new Date(2022, 5, 12, 21, 5),
-      KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
-      IHavaalani: "Ordu - Giresun Havalimanı",
-      Fiyat: 639.98,
-      KoltukSayisi: 258,
-      Bagaj: 15,
-    },
-    {
-      Marka: ucusFirmaUcaklar[0].Marka,
-      KalkisTarih: "2022-05-18",
-      InisTarih: new Date(2022, 5, 12, 21, 5),
-      KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
-      IHavaalani: "Ordu - Giresun Havalimanı",
-      Fiyat: 669.98,
       KoltukSayisi: 258,
       Bagaj: 15,
     },
     {
       Marka: ucusFirmaUcaklar[2].Marka,
-      KalkisTarih: new Date(2022, 6, 13, 8, 15),
-      InisTarih: new Date(2022, 6, 13, 9, 50),
-      KHavaalani: "İstanbul Anadolu - SAW",
-      IHavaalani: "Ordu - Giresun Havaalanı",
-      Fiyat: 823.98,
-      KoltukSayisi: 236,
+      KalkisTarih: "2022-05-18",
+      InisTarih: "2022-05-18",
+      KSaat: "12:00",
+      ISaat: "13:30",
+      KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
+      IHavaalani: "Ordu - Giresun Havalimanı",
+      Fiyat: 639.98,
+      KoltukSayisi: 258,
       Bagaj: 15,
     },
     {
-      Marka: ucusFirmaUcaklar[2].Marka,
+      Marka: ucusFirmaUcaklar[1].Marka,
       KalkisTarih: "2022-05-18",
-      InisTarih: new Date(2022, 6, 13, 18, 45),
-      KHavaalani: "İstanbul Anadolu - SAW",
-      IHavaalani: "Ordu - Giresun Havaalanı",
-      Fiyat: 823.98,
-      KoltukSayisi: 236,
+      InisTarih: "2022-05-18",
+      KSaat: "15:00",
+      ISaat: "16:30",
+      KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
+      IHavaalani: "Ordu - Giresun Havalimanı",
+      Fiyat: 639.98,
+      KoltukSayisi: 258,
+      Bagaj: 15,
+    },
+    {
+      Marka: ucusFirmaUcaklar[0].Marka,
+      KalkisTarih: "2022-05-18",
+      InisTarih: "2022-05-18",
+      KSaat: "20:15",
+      ISaat: "21:45",
+      KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
+      IHavaalani: "Ordu - Giresun Havalimanı",
+      Fiyat: 639.98,
+      KoltukSayisi: 258,
       Bagaj: 15,
     },
   ];
-  ///
-  const [gecerliSeferler, setGecerliSeferler] = useState(null); //bu state sayesinde aşağıda foreach ile
-  // listedede istediğimiz sefer var mı diye aradıktan sonra seferleri saklayabileceğiz
-const secili=[];
+
+  const secili = [];
   seferler.forEach((Havalimani) => {
     if (Havalimani.KHavaalani === props.yolculukRota.nereden) {
       if (Havalimani.IHavaalani === props.yolculukRota.nereye) {
-        if (Havalimani.KalkisTarih == props.yolculukRota.neZaman) {
+        if (Havalimani.KalkisTarih === props.yolculukRota.neZaman) {
           console.log("sefer var");
           secili.push(Havalimani);
-        } 
-        else {
+        } else {
           console.log("sefer yok", ucusFirmaUcaklar[0].Marka);
-          console.log(Havalimani.KalkisTarih.getDay());
         }
       } else console.log("sefer yok");
     }
   });
-  console.log(secili);
-  //console.log(ucusFirmaUcaklar[0].Marka);
-  //console.log(props);
 
-  /*const seferKayit = {
-    //Burada uçuta seçilen tarih kaydedilio ki
-    //sonradan uçuş kartlarını oşultururken işimize yarasın
-    Nereden: props.yolculukRota.nereden,
-    Nereye: props.yolculukRota.nereye,
-    NeZaman: props.yolculukRota.neZaman,
-  };
-*/
   return (
     <div className="ucus-liste">
       <UcusKart ucusSeferleri={secili}></UcusKart>
