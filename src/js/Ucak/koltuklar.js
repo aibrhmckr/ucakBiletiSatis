@@ -6,6 +6,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import "./koltuklar.css";
 import Koltuk from "./Koltuk";
+import { useState } from "react";
 
 export default function ScrollDialog() {
   const [open, setOpen] = React.useState(false);
@@ -30,22 +31,21 @@ export default function ScrollDialog() {
     }
   }, [open]);
 
+    const[secilenKoltuk,setSecilenKoltuk]=useState(0);
+
   const temp = [];
   let temp2 = [];
-  let sonuc;
   for (let i = 1; i < 101; i++) {
-    temp2.push(<Koltuk numara={i}></Koltuk>);
+    temp2.push(<Koltuk numara={i} koltukSec={secilenKoltuk=>setSecilenKoltuk(secilenKoltuk)}></Koltuk>);
     if (i % 4 === 0) {
       temp.push(<div className="lar">{temp2}</div>);
       temp2 = [];
       //console.log(i);
       //console.log("//////")
     }
-   // console.log(document.getElementById(i))
-
   }
 
-  
+  console.log(secilenKoltuk)
   return (
     <div>
       <Button onClick={handleClickOpen("paper")}>Koltuk Seç</Button>

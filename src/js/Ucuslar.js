@@ -1,4 +1,3 @@
-import { useState } from "react";
 import UcusKart from "./UcusKart";
 import "../css/Ucuslar.css";
 

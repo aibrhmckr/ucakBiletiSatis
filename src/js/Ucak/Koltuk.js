@@ -1,12 +1,7 @@
 import { useState } from "react";
 import "./koltuklar.css";
 const Koltuk = (props) => {
- /* const [koltukNum, setKoltukNum] = useState(false);
-  const koltukNumVer = (event) => {
-    if (koltukNum === true) setKoltukNum(false);
-    else setKoltukNum(true);
-  };*/
-let koltukID=props.numara;
+
 
   return (
     <div className="koltuk">
@@ -18,9 +13,9 @@ let koltukID=props.numara;
           id={props.numara}
           name="koltuk-numara"
           value={props.numara}
+          onClick={()=>props.koltukSec(props.numara)}
         ></input>
-        <label htmlFor={props.numara}>{koltukID}</label>
-        {console.log("koltuk-numara")}
+        {/*<label htmlFor={props.numara}>{koltukID}</label>*/}
       </div>
     </div>
   );

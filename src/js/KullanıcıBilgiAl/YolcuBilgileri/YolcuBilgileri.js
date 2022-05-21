@@ -1,5 +1,5 @@
 import { TextField } from "@mui/material";
-import { useState } from "react";
+import React, { useState } from "react";
 import CinsiyetRadioButton from "./CinsiyetRadioButton";
 import "./YolcuBilgileri.css";
 const YolcuBilgileri = () => {
@@ -17,11 +17,10 @@ const YolcuBilgileri = () => {
   const TCKaydet = (event) => {
     setTcKimlik(event.target.value);
   };
-
- /* const [cinsiyetSec, setCinsiyetSec] = useState(false);
-  const cinsiyetSecim = () => {
-    setCinsiyetSec(true);
-  };*/
+//////////////////////////////////////////////////
+  const [cinsiyetim,setcinsiyetim]=useState("Seçilmedi");
+  console.log(cinsiyetim)
+/////////////////////////////////////////////////
 
 
   const [dogumT, setDogumT] = useState(null);
@@ -91,7 +90,8 @@ const YolcuBilgileri = () => {
       <b>
         <div>Cinsiyet</div>
       </b>
-      <CinsiyetRadioButton ></CinsiyetRadioButton>
+      
+      <CinsiyetRadioButton cinsiyetDegistir={cinsiyetim=>setcinsiyetim(cinsiyetim)}/>
     </div>
   );
 };
