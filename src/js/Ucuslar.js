@@ -1,5 +1,6 @@
 import UcusKart from "./UcusKart";
 import "../css/Ucuslar.css";
+import { useState } from "react";
 
 const Ucuslar = (props) => {
   const PegasusAirlines = [
@@ -240,10 +241,11 @@ const Ucuslar = (props) => {
       } else {}
     }
   });
+//  const[sefer,setSefer]=useState(null);
 
   return (
     <div className="ucus-liste">
-      <UcusKart ucusSeferleri={secili} kapasite={seciliUcakYolcu}></UcusKart>
+      <UcusKart ucusSeferleri={secili} ucusKapasite={seciliUcakYolcu}></UcusKart>
     </div>
   );
 };

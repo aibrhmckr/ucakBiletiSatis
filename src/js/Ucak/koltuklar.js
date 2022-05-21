@@ -11,14 +11,15 @@ import { useState } from "react";
 export default function ScrollDialog(props) {
   const [open, setOpen] = React.useState(false);
   const [scroll, setScroll] = React.useState("paper");
+  const[secilenKoltuk,setSecilenKoltuk]=useState(0);
 
   const handleClickOpen = (scrollType) => () => {
     setOpen(true);
     setScroll(scrollType);
   };
-
   const handleClose = () => {
     setOpen(false);
+    props.secilenKoltuk(secilenKoltuk)
   };
   ///////////
   const descriptionElementRef = React.useRef(null);
@@ -31,7 +32,6 @@ export default function ScrollDialog(props) {
     }
   }, [open]);
 
-    const[secilenKoltuk,setSecilenKoltuk]=useState(0);
 
   const temp = [];
   let temp2 = [];
@@ -44,8 +44,7 @@ export default function ScrollDialog(props) {
       //console.log("//////")
     }
   }
-
-  console.log(secilenKoltuk)
+ // console.log(secilenKoltuk)
   return (
     <div>
       <Button onClick={handleClickOpen("paper")}>Koltuk Seç</Button>
@@ -68,7 +67,7 @@ export default function ScrollDialog(props) {
           </div>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>İptal Et</Button>
+          {/*<Button onClick={handleClose}>İptal Et</Button>*/}
           <Button onClick={handleClose}>Onayla</Button>
         </DialogActions>
       </Dialog>

@@ -1,0 +1,12 @@
+.yonetici{
+    border-radius: 7px;
+    border: 1px solid grey;
+    box-shadow: 1.5px 1.5px 0px #888888;
+    margin-bottom: 8px;
+    padding: 4px;
+    background-color: white;
+}
+.yonetici-giris{
+    display: flex;
+    flex-direction: row;
+}

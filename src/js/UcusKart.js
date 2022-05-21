@@ -1,5 +1,6 @@
 import Koltuklar from "./Ucak/koltuklar";
 import "../css/UcusKart.css"
+import { useState } from "react";
 const UcusKart = (props) => {
   const kartlar = [];
   props.ucusSeferleri.map((sefer) =>
@@ -12,8 +13,15 @@ const UcusKart = (props) => {
 
  const Kart=(props)=> {
    let kapasite=props.yolculukKapasite
+
+   //
+   /* Burada secilen koltuğun numarasını alt ekemandan almaya 
+   çalışıyoruz */
+   const[koltukNumara,setKoltukNumara]=useState(0);
+//
+console.log(koltukNumara)
   return (
-    <div className="sefer-kart">
+    <div className="sefer-kart" >
       <div>
         <div>
           {props.yolculukRota.Marka}<br/>
@@ -22,7 +30,8 @@ const UcusKart = (props) => {
         </div>
         <div>{props.yolculukRota.KSaat} &#8594; {props.yolculukRota.ISaat}</div>
       </div>
-      <Koltuklar yolculukKapasite={kapasite}/>
+      <Koltuklar yolculukKapasite={kapasite} secilenKoltuk={koltukNumara=>setKoltukNumara(koltukNumara)}/>
+      {/*{koltukNumara!==null ? (<button>İlerle</button>):(<div/>)}*/}
     </div>
   );
 }
