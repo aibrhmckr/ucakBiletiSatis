@@ -143,7 +143,7 @@ const Ucuslar = (props) => {
     id: 1,
     UcusKart: "Boeing",
     ucak: "B737-800",
-    yolcuKapasitesi: 165,
+    yolcuKapasitesi: 164,
   };
   const ucusFirmaUcaklar = [
     {
@@ -171,8 +171,8 @@ const Ucuslar = (props) => {
       KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
       IHavaalani: "Ordu - Giresun Havalimanı",
       Fiyat: 639.98,
-      KoltukSayisi: 258,
-      Bagaj: 15,
+      ucak:PegasusAirlines[2],
+      yolcuSayisi:PegasusAirlines[2].yolcuKapasitesi
     },
     {
       Marka: ucusFirmaUcaklar[1].Marka,
@@ -183,8 +183,9 @@ const Ucuslar = (props) => {
       KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
       IHavaalani: "Ordu - Giresun Havalimanı",
       Fiyat: 639.98,
-      KoltukSayisi: 258,
-      Bagaj: 15,
+      ucak:THY[12],
+      yolcuSayisi:PegasusAirlines[2].yolcuKapasitesi
+
     },
     {
       Marka: ucusFirmaUcaklar[2].Marka,
@@ -195,8 +196,9 @@ const Ucuslar = (props) => {
       KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
       IHavaalani: "Ordu - Giresun Havalimanı",
       Fiyat: 639.98,
-      KoltukSayisi: 258,
-      Bagaj: 15,
+      ucak:THY[16],
+      yolcuSayisi:PegasusAirlines[2].yolcuKapasitesi
+
     },
     {
       Marka: ucusFirmaUcaklar[1].Marka,
@@ -207,8 +209,9 @@ const Ucuslar = (props) => {
       KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
       IHavaalani: "Ordu - Giresun Havalimanı",
       Fiyat: 639.98,
-      KoltukSayisi: 258,
-      Bagaj: 15,
+      ucak:AnadoluJet[0],
+      yolcuSayisi:PegasusAirlines[2].yolcuKapasitesi
+
     },
     {
       Marka: ucusFirmaUcaklar[0].Marka,
@@ -219,28 +222,28 @@ const Ucuslar = (props) => {
       KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
       IHavaalani: "Ordu - Giresun Havalimanı",
       Fiyat: 639.98,
-      KoltukSayisi: 258,
-      Bagaj: 15,
+      ucak:PegasusAirlines[3],
+      yolcuSayisi:PegasusAirlines[2].yolcuKapasitesi
+
     },
   ];
 
   const secili = [];
+  const seciliUcakYolcu=[];
   seferler.forEach((Havalimani) => {
     if (Havalimani.KHavaalani === props.yolculukRota.nereden) {
       if (Havalimani.IHavaalani === props.yolculukRota.nereye) {
         if (Havalimani.KalkisTarih === props.yolculukRota.neZaman) {
-          console.log("sefer var");
           secili.push(Havalimani);
-        } else {
-          console.log("sefer yok", ucusFirmaUcaklar[0].Marka);
-        }
-      } else console.log("sefer yok");
+          seciliUcakYolcu.push(Havalimani.yolcuSayisi)
+        } else {}
+      } else {}
     }
   });
 
   return (
     <div className="ucus-liste">
-      <UcusKart ucusSeferleri={secili}></UcusKart>
+      <UcusKart ucusSeferleri={secili} kapasite={seciliUcakYolcu}></UcusKart>
     </div>
   );
 };

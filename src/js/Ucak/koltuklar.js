@@ -8,7 +8,7 @@ import "./koltuklar.css";
 import Koltuk from "./Koltuk";
 import { useState } from "react";
 
-export default function ScrollDialog() {
+export default function ScrollDialog(props) {
   const [open, setOpen] = React.useState(false);
   const [scroll, setScroll] = React.useState("paper");
 
@@ -35,7 +35,7 @@ export default function ScrollDialog() {
 
   const temp = [];
   let temp2 = [];
-  for (let i = 1; i < 101; i++) {
+  for (let i = 1; i < props.yolculukKapasite; i++) {
     temp2.push(<Koltuk numara={i} koltukSec={secilenKoltuk=>setSecilenKoltuk(secilenKoltuk)}></Koltuk>);
     if (i % 4 === 0) {
       temp.push(<div className="lar">{temp2}</div>);
