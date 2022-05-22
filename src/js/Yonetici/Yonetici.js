@@ -1,5 +1,6 @@
 import { TextField } from "@mui/material";
 import { useState } from "react";
+import { seferler } from "../Seferler";
 import "./Yonetici.css"
 const Yonetici = (props) => {
   const [kullaniciAdi, setKullaniciAdi] = useState("");
@@ -12,10 +13,13 @@ const Yonetici = (props) => {
     setSifre(event.target.value);
   };
 
+  const ucus=seferler.find((x) => x.id === props.secilenUcus?.ucusID)
   return (
     <div className="yonetici">
       <div className="yonetici-giris">
         <div className="yonetici-kAdi">
+          <h1>{ucus?.KHavaalani} - {ucus?.IHavaalani}</h1>
+          <h1>{props.secilenUcus?.secilenKoltuk}</h1>
           <b>
             <div>Kullanıcı Adı</div>
           </b>

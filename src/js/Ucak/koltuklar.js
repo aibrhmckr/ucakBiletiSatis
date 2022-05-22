@@ -20,6 +20,8 @@ export default function ScrollDialog(props) {
   const handleClose = () => {
     setOpen(false);
     props.secilenKoltuk(secilenKoltuk)
+    console.log(secilenKoltuk,props.ucusID)
+    props.setSecilenUcus({secilenKoltuk:secilenKoltuk,ucusID:props.ucusID,satinalindi:false})
   };
   ///////////
   const descriptionElementRef = React.useRef(null);
@@ -36,15 +38,15 @@ export default function ScrollDialog(props) {
   const temp = [];
   let temp2 = [];
   for (let i = 1; i < props.yolculukKapasite; i++) {
-    temp2.push(<Koltuk numara={i} koltukSec={secilenKoltuk=>setSecilenKoltuk(secilenKoltuk)}></Koltuk>);
+    temp2.push(<Koltuk numara={i} koltukSec={secilenKoltuk=>setSecilenKoltuk(secilenKoltuk)} 
+    disabled={props.secilenUcus?.ucusID==props.ucusID && props.secilenUcus?.satinalindi==true && i==props.secilenUcus?.secilenKoltuk}/>);
     if (i % 4 === 0) {
       temp.push(<div className="lar">{temp2}</div>);
       temp2 = [];
       //console.log(i);
       //console.log("//////")
     }
-  }
- // console.log(secilenKoltuk)
+  }  
   return (
     <div>
       <Button onClick={handleClickOpen("paper")}>Koltuk Seç</Button>

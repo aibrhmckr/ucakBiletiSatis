@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Select from "react-select";
 import Ucuslar from "./Ucuslar";
 
-
 const BiletAra = (props) => {
   // kaynak=> https://www.npmjs.com/package/react-select , https://react-select.com/home
   //https://mui.com/material-ui
@@ -166,6 +165,10 @@ const BiletAra = (props) => {
               className="yer"
               onChange={havalimanisec}
               options={havaalanlari}
+              // value={{
+              //   value: "İstanbul Sabiha Gökçen Havalimanı",
+              //   label: "İstanbul Sabiha Gökçen Havalimanı",
+              // }}
             />
           </div>
 
@@ -177,6 +180,10 @@ const BiletAra = (props) => {
               className="yer"
               onChange={inisHavalimaniSec}
               options={havaalanlari}
+              // value={{
+              //   value: "Ordu - Giresun Havalimanı",
+              //   label: "Ordu - Giresun Havalimanı",
+              // }}
             />
           </div>
         </div>
@@ -204,11 +211,11 @@ const BiletAra = (props) => {
           </button>
         </div>
 
-       {/* <ScrollDialog></ScrollDialog> */}
+        {/* <ScrollDialog></ScrollDialog> */}
       </form>
 
       {ucuslarEkrani === true ? (
-        <Ucuslar yolculukRota={seyehat}></Ucuslar>
+        <Ucuslar yolculukRota={seyehat} secilenUcus={props.secilenUcus} setSecilenUcus={props.setSecilenUcus}></Ucuslar>
       ) : (
         <form> Sefer arayın </form>
       )}

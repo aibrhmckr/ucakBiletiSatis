@@ -1,12 +1,12 @@
 import React from "react";
 import Card from "react-credit-cards";
-import "./KartInput.css"
+import "./KartInput.css";
 
 import {
   formatCreditCardNumber,
   formatCVC,
   formatExpirationDate,
-  formatFormData
+  formatFormData,
 } from "./Utils";
 
 import "react-credit-cards/es/styles-compiled.css";
@@ -19,7 +19,7 @@ export default class KartBilgileri extends React.Component {
     cvc: "",
     issuer: "",
     focused: "",
-    formData: null
+    formData: null,
   };
 
   handleCallback = ({ issuer }, isValid) => {
@@ -30,7 +30,7 @@ export default class KartBilgileri extends React.Component {
 
   handleInputFocus = ({ target }) => {
     this.setState({
-      focused: target.name
+      focused: target.name,
     });
   };
 
@@ -66,7 +66,6 @@ export default class KartBilgileri extends React.Component {
     return (
       <div key="Payment">
         <div className="App-payment">
-       
           <Card
             number={number}
             name={name}
@@ -87,7 +86,6 @@ export default class KartBilgileri extends React.Component {
                 onChange={this.handleInputChange}
                 onFocus={this.handleInputFocus}
               />
-        
             </div>
             <div className="form-group">
               <input
@@ -100,7 +98,7 @@ export default class KartBilgileri extends React.Component {
                 onFocus={this.handleInputFocus}
               />
             </div>
-            
+
             <div className="row">
               <div className="col-6">
                 <input
@@ -129,19 +127,27 @@ export default class KartBilgileri extends React.Component {
             </div>
             <input type="hidden" name="issuer" value={issuer} />
             <div className="form-actions">
-              <button className="btnode">Ödeme <b className="ok">&#8594;</b></button>
+              <button
+                className="btnode"
+                onClick={() => {
+                  this.props.setSecilenUcus({
+                    ...this.props.secilenUcus,
+                    satinalindi: true,
+                  });
+                }}
+              >
+                Ödeme <b className="ok">&#8594;</b>
+              </button>
             </div>
           </form>
-          {formData && (
+          {/* {formData && (
             <div className="App-highlight">
               {formatFormData(formData).map((d, i) => (
                 <div key={i}>{d}</div>
               ))}
             </div>
-          )}
-          
+          )} */}
         </div>
-       
       </div>
     );
   }
