@@ -5,8 +5,32 @@
     margin-bottom: 8px;
     padding: 4px;
     background-color: white;
+    width: 800px;
+    height: 100px;
 }
 .yonetici-giris{
     display: flex;
     flex-direction: row;
+}
+.yonetici-kAdi{
+    width: 350px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 5px;
+}
+.yonetici-sifre{
+    width: 350px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 5px;
+}
+.yonetici-button{
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    width: 90px;
+    height: 50px;
+    margin-top: 25px;
+    margin-left: 5px;
+
 }

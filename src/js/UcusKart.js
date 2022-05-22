@@ -22,9 +22,8 @@ const UcusKart = (props) => {
 //console.log(koltukNumara)
   return (
     <div className="sefer-kart" >
-      <div>
+      <div className="resim">
         <div>
-        
           {props.yolculukRota.Marka}<br/>
           {props.yolculukRota.KHavaalani}
           &#8594; {props.yolculukRota.IHavaalani}

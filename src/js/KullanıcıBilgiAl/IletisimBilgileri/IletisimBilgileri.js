@@ -1,5 +1,5 @@
 import { TextField } from "@mui/material";
-import { useState } from "react";
+import { useEffect,useState } from "react";
 import "../../../css/iletisim.css";
 
 import ReactPhone from "./ReactPhone";
@@ -14,7 +14,13 @@ const IletisimBilgileri = (props) => {
   const telefonKaydet=(event)=>{
     setTelefon(event.value)
   }
-  console.log(eposta,telefon)
+  //console.log(eposta,telefon)
+  //
+  useEffect(() => {
+    props.setIletisim({eposta:eposta,telefon:telefon})
+  
+  }, [eposta,telefon])
+  
   return (
     <div className="bruh">
       <div>

@@ -134,6 +134,7 @@ export default class KartBilgileri extends React.Component {
                     ...this.props.secilenUcus,
                     satinalindi: true,
                   });
+                  alert("Sefer Oluşturuldu")
                 }}
               >
                 Ödeme <b className="ok">&#8594;</b>

@@ -21,7 +21,7 @@ const cinsiyetControl=()=>{
 
 
 //props.cinsiyetNe=cinsiyetim;
-console.log(cinsiyetim)
+//console.log(cinsiyetim)
   return (
     //render sayesinde normalde sadece 1 komponent dönerken
     //burada biz birden çok şey döndürebilir

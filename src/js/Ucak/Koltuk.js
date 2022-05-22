@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./koltuklar.css";
 const Koltuk = (props) => {
   return (

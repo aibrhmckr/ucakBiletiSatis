@@ -17,21 +17,21 @@ const Yonetici = (props) => {
   return (
     <div className="yonetici">
       <div className="yonetici-giris">
-        <div className="yonetici-kAdi">
-          <h1>{ucus?.KHavaalani} - {ucus?.IHavaalani}</h1>
-          <h1>{props.secilenUcus?.secilenKoltuk}</h1>
+        <div >
+          {/* <h1>{ucus?.KHavaalani} - {ucus?.IHavaalani}</h1>
+          <h1>{props.secilenUcus?.secilenKoltuk}</h1> */}
           <b>
             <div>Kullanıcı Adı</div>
           </b>
-          <TextField onChange={kullaniciAdiKaydet}></TextField>
+          <TextField className="yonetici-kAdi" onChange={kullaniciAdiKaydet}></TextField>
         </div>
-        <div className="yonetici-sifre">
+        <div >
           <b>
             <div>Şifre</div>
           </b>
-          <TextField></TextField>
+          <TextField className="yonetici-sifre"></TextField>
         </div>
-        <button>Giriş Yap</button>
+        <button className="yonetici-button">Giriş Yap</button>
       </div>
     </div>
   );

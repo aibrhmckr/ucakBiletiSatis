@@ -6,7 +6,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import "./koltuklar.css";
 import Koltuk from "./Koltuk";
-import { useState } from "react";
+import { useEffect,useState } from "react";
 
 export default function ScrollDialog(props) {
   const [open, setOpen] = React.useState(false);
@@ -47,6 +47,14 @@ export default function ScrollDialog(props) {
       //console.log("//////")
     }
   }  
+  // useEffect(() => {
+  //         console.log("sa")
+
+  
+  //   return () => {
+  //   }
+  // }, [])
+  
   return (
     <div>
       <Button onClick={handleClickOpen("paper")}>Koltuk Seç</Button>

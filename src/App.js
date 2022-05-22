@@ -5,30 +5,34 @@ import YolcuBilgileri from "./js/KullanıcıBilgiAl/YolcuBilgileri/YolcuBilgiler
 import Box from "@mui/material/Box";
 import KartBilgileri from "./js/KullanıcıBilgiAl/Odeme/KartBilgileri";
 import Yonetici from "./js/Yonetici/Yonetici";
-import { seferler } from "./js/Seferler";
+import "./css/AppJS.css";
+// import { seferler } from "./js/Seferler";
 
 function App() {
   const [secilenUcus, setSecilenUcus] = useState();
-
+  const [iletisim, setIletisim] = useState();
+  const [yolcuBilgi, setYolcuBilgi] = useState();
+  console.log(secilenUcus, iletisim, yolcuBilgi);
   return (
-    <div>
-      <Box width={800}>
-
+    <div className="ekran">
+      <div className="ekran-sol">
         <BiletAra secilenUcus={secilenUcus} setSecilenUcus={setSecilenUcus} />
-        <IletisimBilgileri
-          secilenUcus={secilenUcus}
-          setSecilenUcus={setSecilenUcus}
-        />
-        <YolcuBilgileri
-          secilenUcus={secilenUcus}
-          setSecilenUcus={setSecilenUcus}
-        />
+        <IletisimBilgileri iletisim={iletisim} setIletisim={setIletisim} />
+        <YolcuBilgileri yolcuBilgi={yolcuBilgi} setYolcuBilgi={setYolcuBilgi} />
+      </div>
+      <div className="ekran-sag">
         <KartBilgileri
           secilenUcus={secilenUcus}
           setSecilenUcus={setSecilenUcus}
         />
-        <Yonetici secilenUcus={secilenUcus} />
-      </Box>
+      </div>
+      <div>
+        <Yonetici
+          secilenUcus={secilenUcus}
+          iletisim={iletisim}
+          yolcuBilgi={yolcuBilgi}
+        />
+      </div>
     </div>
   );
 }

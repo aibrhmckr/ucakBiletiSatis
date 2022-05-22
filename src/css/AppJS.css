@@ -1,0 +1,4 @@
+.ekran{
+    display: flex;
+    flex-direction: row;
+}

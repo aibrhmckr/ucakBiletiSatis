@@ -1,8 +1,8 @@
 import { TextField } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CinsiyetRadioButton from "./CinsiyetRadioButton";
 import "./YolcuBilgileri.css";
-const YolcuBilgileri = () => {
+const YolcuBilgileri = (props) => {
   const [ad, setAd] = useState(null);
   const adKaydet = (event) => {
     setAd(event.target.value);
@@ -19,7 +19,7 @@ const YolcuBilgileri = () => {
   };
 //////////////////////////////////////////////////
   const [cinsiyetim,setcinsiyetim]=useState("Seçilmedi");
-  console.log(cinsiyetim)
+  //console.log(cinsiyetim)
 /////////////////////////////////////////////////
 
 
@@ -28,7 +28,13 @@ const YolcuBilgileri = () => {
     setDogumT(event.target.value);
   };
 
-  console.log(ad, soyad, tcKimilk, dogumT);
+useEffect(() => {
+  props.setYolcuBilgi({ad:ad,soyad:soyad,tcKimilk:tcKimilk,cinsiyetim:cinsiyetim,dogumT:dogumT})
+
+}, [ad,soyad,tcKimilk,cinsiyetim,dogumT])
+
+  //console.log(ad, soyad, tcKimilk, dogumT);
+  //
   return (
     <div className="yolcu-bilgileri">
       <h3>Yolcu Bilgileri</h3>
