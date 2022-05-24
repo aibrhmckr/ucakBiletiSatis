@@ -12,6 +12,8 @@ function App() {
   const [secilenUcus, setSecilenUcus] = useState();
   const [iletisim, setIletisim] = useState();
   const [yolcuBilgi, setYolcuBilgi] = useState();
+  const [biletler,setBiletler]=useState();
+  
   console.log(secilenUcus, iletisim, yolcuBilgi);
   return (
     <div className="ekran">
@@ -24,6 +26,8 @@ function App() {
         <KartBilgileri
           secilenUcus={secilenUcus}
           setSecilenUcus={setSecilenUcus}
+          iletisim={iletisim}
+          yolcuBilgi={yolcuBilgi}
         />
       </div>
       <div>

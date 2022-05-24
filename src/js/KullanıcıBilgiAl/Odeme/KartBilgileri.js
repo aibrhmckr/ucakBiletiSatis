@@ -10,6 +10,7 @@ import {
 } from "./Utils";
 
 import "react-credit-cards/es/styles-compiled.css";
+import { seferler } from "../../Seferler";
 
 export default class KartBilgileri extends React.Component {
   state = {
@@ -62,7 +63,19 @@ export default class KartBilgileri extends React.Component {
 
   render() {
     const { name, number, expiry, cvc, focused, issuer, formData } = this.state;
-
+    const bilet={
+      ucusID:this.props.secilenUcus?.ucusID,
+      marka:seferler[this.props.secilenUcus?.ucusID]?.Marka,
+      ad:this.props.yolcuBilgi?.ad,
+      soyad:this.props.yolcuBilgi?.soyad,
+      KHavaalani:seferler[this.props.secilenUcus?.ucusID]?.KHavaalani,
+      IHavaalani:seferler[this.props.secilenUcus?.ucusID]?.IHavaalani,
+      koltuk:this.props.secilenUcus?.secilenKoltuk,
+      KalkisTarih:seferler[this.props.secilenUcus?.ucusID]?.KalkisTarih,
+      InisTarih:seferler[this.props.secilenUcus?.ucusID]?.InisTarih,
+      KSaat:seferler[this.props.secilenUcus?.ucusID]?.KSaat,
+      ISaat:seferler[this.props.secilenUcus?.ucusID]?.ISaat
+    }
     return (
       <div key="Payment">
         <div className="App-payment">
@@ -135,6 +148,7 @@ export default class KartBilgileri extends React.Component {
                     satinalindi: true,
                   });
                   alert("Sefer Oluşturuldu")
+                  console.log(bilet)
                 }}
               >
                 Ödeme <b className="ok">&#8594;</b>
