@@ -63,19 +63,19 @@ export default class KartBilgileri extends React.Component {
 
   render() {
     const { name, number, expiry, cvc, focused, issuer, formData } = this.state;
-    const bilet={
-      ucusID:this.props.secilenUcus?.ucusID,
-      marka:seferler[this.props.secilenUcus?.ucusID]?.Marka,
-      ad:this.props.yolcuBilgi?.ad,
-      soyad:this.props.yolcuBilgi?.soyad,
-      KHavaalani:seferler[this.props.secilenUcus?.ucusID]?.KHavaalani,
-      IHavaalani:seferler[this.props.secilenUcus?.ucusID]?.IHavaalani,
-      koltuk:this.props.secilenUcus?.secilenKoltuk,
-      KalkisTarih:seferler[this.props.secilenUcus?.ucusID]?.KalkisTarih,
-      InisTarih:seferler[this.props.secilenUcus?.ucusID]?.InisTarih,
-      KSaat:seferler[this.props.secilenUcus?.ucusID]?.KSaat,
-      ISaat:seferler[this.props.secilenUcus?.ucusID]?.ISaat
-    }
+    const bilet = {
+      ucusID: this.props.secilenUcus?.ucusID,
+      marka: seferler[this.props.secilenUcus?.ucusID]?.Marka,
+      ad: this.props.yolcuBilgi?.ad,
+      soyad: this.props.yolcuBilgi?.soyad,
+      KHavaalani: seferler[this.props.secilenUcus?.ucusID]?.KHavaalani,
+      IHavaalani: seferler[this.props.secilenUcus?.ucusID]?.IHavaalani,
+      koltuk: this.props.secilenUcus?.secilenKoltuk,
+      KalkisTarih: seferler[this.props.secilenUcus?.ucusID]?.KalkisTarih,
+      InisTarih: seferler[this.props.secilenUcus?.ucusID]?.InisTarih,
+      KSaat: seferler[this.props.secilenUcus?.ucusID]?.KSaat,
+      ISaat: seferler[this.props.secilenUcus?.ucusID]?.ISaat,
+    };
     return (
       <div key="Payment">
         <div className="App-payment">
@@ -147,21 +147,19 @@ export default class KartBilgileri extends React.Component {
                     ...this.props.secilenUcus,
                     satinalindi: true,
                   });
-                  alert("Sefer Oluşturuldu")
-                  console.log(bilet)
+                  alert("Sefer Oluşturuldu");
+
+                  this.props.setBiletler([
+                    ...this.props.biletler,
+                    { PNR: Math.round(Math.random() * 1000), bilet },
+                  ]);
+                 // console.log(this.props.biletler)
                 }}
               >
                 Ödeme <b className="ok">&#8594;</b>
               </button>
             </div>
           </form>
-          {/* {formData && (
-            <div className="App-highlight">
-              {formatFormData(formData).map((d, i) => (
-                <div key={i}>{d}</div>
-              ))}
-            </div>
-          )} */}
         </div>
       </div>
     );

@@ -5,7 +5,7 @@ const Bilet = (props) => {
   //
   return (
     <div>
-        <label>{seferler[props.secilenUcus?.ucusID]?.Marka}</label> <br/>
+        {/* <label>{seferler[props.secilenUcus?.ucusID]?.Marka}</label> <br/>
       <label className="Adim">{props.yolcuBilgi?.ad}</label>
       <label className="Soyadim"> {props.yolcuBilgi?.soyad}</label>
       <br />
@@ -29,7 +29,8 @@ const Bilet = (props) => {
       <label className="kalkis-inis__saat">{seferler[props.secilenUcus?.ucusID]?.KSaat } &#8594; {seferler[props.secilenUcus?.ucusID]?.ISaat}</label>
       <br />
       <button className="iptal-button">İptal Et</button>
-      <br />
+      <br /> */}
+      <label>{props.bilet?.Marka}</label> <br/>
     </div>
   );
 };

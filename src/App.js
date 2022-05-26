@@ -1,5 +1,5 @@
 import BiletAra from "./js/BiletAra";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import IletisimBilgileri from "./js/KullanıcıBilgiAl/IletisimBilgileri/IletisimBilgileri";
 import YolcuBilgileri from "./js/KullanıcıBilgiAl/YolcuBilgileri/YolcuBilgileri";
 import Box from "@mui/material/Box";
@@ -9,12 +9,15 @@ import "./css/AppJS.css";
 // import { seferler } from "./js/Seferler";
 
 function App() {
+   const biletim=[]
   const [secilenUcus, setSecilenUcus] = useState();
   const [iletisim, setIletisim] = useState();
   const [yolcuBilgi, setYolcuBilgi] = useState();
-  const [biletler,setBiletler]=useState();
-  
-  console.log(secilenUcus, iletisim, yolcuBilgi);
+  const [biletler, setBiletler] = useState(biletim);
+
+  //console.clear()
+  //console.log(biletler);
+
   return (
     <div className="ekran">
       <div className="ekran-sol">
@@ -28,6 +31,8 @@ function App() {
           setSecilenUcus={setSecilenUcus}
           iletisim={iletisim}
           yolcuBilgi={yolcuBilgi}
+          biletler={biletler}
+          setBiletler={setBiletler}
         />
       </div>
       <div>
@@ -35,8 +40,11 @@ function App() {
           secilenUcus={secilenUcus}
           iletisim={iletisim}
           yolcuBilgi={yolcuBilgi}
+          biletler={biletler}
+          setBiletler={setBiletler}
         />
       </div>
+      <button>Yazdır</button>
     </div>
   );
 }

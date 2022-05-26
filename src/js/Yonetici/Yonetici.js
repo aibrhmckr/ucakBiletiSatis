@@ -2,7 +2,7 @@ import { TextField } from "@mui/material";
 import { useState } from "react";
 import { seferler } from "../Seferler";
 import Biletler from "./Biletler";
-import "./Yonetici.css"
+import "./Yonetici.css";
 const Yonetici = (props) => {
   const [kullaniciAdi, setKullaniciAdi] = useState("");
   const kullaniciAdiKaydet = (event) => {
@@ -14,30 +14,32 @@ const Yonetici = (props) => {
     setSifre(event.target.value);
   };
 
-  const ucus=seferler.find((x) => x.id === props.secilenUcus?.ucusID)
-
+  const ucus = seferler.find((x) => x.id === props.secilenUcus?.ucusID);
 
   return (
     <div className="yonetici">
       <div className="yonetici-giris">
-        <div >
+        <div>
           {/* <h1>{ucus?.KHavaalani} - {ucus?.IHavaalani}</h1>
           <h1>{props.secilenUcus?.secilenKoltuk}</h1> */}
           <b>
             <div>Kullanıcı Adı</div>
           </b>
-          <TextField className="yonetici-kAdi" onChange={kullaniciAdiKaydet}></TextField>
+          <TextField
+            className="yonetici-kAdi"
+            onChange={kullaniciAdiKaydet}
+          ></TextField>
         </div>
-        <div >
+        <div>
           <b>
             <div>Şifre</div>
           </b>
-          
+
           <input className="yonetici-sifre" type="password"></input>
         </div>
         <button className="yonetici-button">Giriş Yap</button>
       </div>
-      <Biletler secilenUcus={props.secilenUcus} iletisim={props.iletisim} yolcuBilgi={props.yolcuBilgi}/>
+      <Biletler biletler={props.biletler} setBiletler={props.setBiletler} />
     </div>
   );
 };
