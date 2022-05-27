@@ -2,8 +2,7 @@ import { seferler } from "../Seferler";
 import "./Bilet.css";
 
 const Bilet = (props) => {
-  //console.log("----------",props.secilenUcus, props.iletisim, props.yolcuBilgi);
-  //
+    
   return (
     <div className="kart">
       <div className="iptal-et">
@@ -29,7 +28,9 @@ const Bilet = (props) => {
           {props.bilet?.bilet?.KSaat} &#8594; {props.bilet?.bilet?.ISaat}
         </label><br />
         </div>
-        <button className="iptal-button">İptal Et</button><br />
+        <button className="iptal-button" onClick={()=>{
+         
+        }}>İptal Et</button><br />
       </div>
     </div>
   );

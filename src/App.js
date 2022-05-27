@@ -79,6 +79,7 @@ function App() {
           setYoneticiGiris={setYoneticiGiris}
         />
       </div>
+      
     </div>
   );
 }
