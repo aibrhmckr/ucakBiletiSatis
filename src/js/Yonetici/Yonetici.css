@@ -1,43 +1,43 @@
-.yonetici{
-    border-radius: 7px;
-    border: 1px solid grey;
-    box-shadow: 1.5px 1.5px 0px #888888;
-    margin-bottom: 8px;
-    padding: 4px;
-    background-color: white;
-    width: 800px;
-    height: 100px;
+.yonetici {
+  border-radius: 7px;
+  border: 1px solid grey;
+  box-shadow: 1.5px 1.5px 0px #888888;
+  margin-bottom: 8px;
+  padding: 4px;
+  background-color: white;
+  width: 800px;
+  height: 100px;
 }
-.yonetici-giris{
-    display: flex;
-    flex-direction: row;
+.yonetici-giris {
+  display: flex;
+  flex-direction: row;
 }
-.yonetici-kAdi{
-    width: 350px;
-    height: 40px;
-    margin: 5px;
-    border-radius: 5px;
+.yonetici-kAdi {
+  width: 350px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 5px;
 }
-.yonetici-sifre{
-    width: 350px;
-    height: 55px;
-    border-radius: 5px;
-    /*margin: 3px;*/
-
+.yonetici-sifre {
+  width: 350px;
+  height: 55px;
+  border-radius: 5px;
+  /*margin: 3px;*/
+  font-family: Verdana;
+  letter-spacing: 0.125em;
 }
-.yonetici-button{
-    background-color: red;
-    color: white;
-    border-radius: 5px;
-    width: 90px;
-    height: 50px;
-    margin-top: 25px;
-    margin-left: 5px;
-
+.yonetici-button {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  width: 90px;
+  height: 50px;
+  margin-top: 25px;
+  margin-left: 5px;
 }
-.kart{ 
-    overflow:auto;
-    height: 830px;
-    margin-top: 20px;
-    background-color: white ;
-    }
+.kart {
+  overflow: auto;
+  height: 830px;
+  margin-top: 20px;
+  background-color: white;
+}

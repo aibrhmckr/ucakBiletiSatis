@@ -14,8 +14,8 @@ function App() {
   const [iletisim, setIletisim] = useState();
   const [yolcuBilgi, setYolcuBilgi] = useState();
   const [biletler, setBiletler] = useState(biletim);
-
-  console.clear();
+  const [yoneticiGiris,setYoneticiGiris]=useState(false)
+  //console.clear();
   console.log(biletler);
 
   return (
@@ -48,6 +48,8 @@ function App() {
           yolcuBilgi={yolcuBilgi}
           biletler={biletler}
           setBiletler={setBiletler}
+          yoneticiGiris={yoneticiGiris}
+          setYoneticiGiris={setYoneticiGiris}
         />
       </div>
     </div>

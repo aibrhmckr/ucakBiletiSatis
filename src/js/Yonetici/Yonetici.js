@@ -3,6 +3,7 @@ import { useState } from "react";
 import { seferler } from "../Seferler";
 import Biletler from "./Biletler";
 import "./Yonetici.css";
+import { yoneticiler } from "./Yoneticiler";
 const Yonetici = (props) => {
   const [kullaniciAdi, setKullaniciAdi] = useState("");
   const kullaniciAdiKaydet = (event) => {
@@ -16,16 +17,34 @@ const Yonetici = (props) => {
 
   const ucus = seferler.find((x) => x.id === props.secilenUcus?.ucusID);
 
+  /*const satilanBiletler = [];
+  props.biletler.map((bilet) =>
+    satilanBiletler.push(<Biletler bilet={bilet} />)
+  );*/
+/////////////////////
   const satilanBiletler = [];
-  props.biletler.map((bilet) => satilanBiletler.push(<Biletler bilet={bilet}/>));
-  
-  
+  const yoneticiGirisiYap = () => {
+    //console.log("tıklandı");
+    yoneticiler.forEach((yonetici) => {
+      //console.log("gezildi");
+      if (yonetici.kAdi === kullaniciAdi) {
+        if (yonetici.sifre === sifre) {
+          props.setYoneticiGiris(true);
+          //console.log("giriş yapildi");
+        }
+      }
+    });
+  };
+  if (props.yoneticiGiris === true) {
+    props.biletler.map((bilet) =>
+      satilanBiletler.push(<Biletler bilet={bilet} />)
+    );
+  }
+//////////////
   return (
     <div className="yonetici">
       <div className="yonetici-giris">
         <div>
-          {/* <h1>{ucus?.KHavaalani} - {ucus?.IHavaalani}</h1>
-          <h1>{props.secilenUcus?.secilenKoltuk}</h1> */}
           <b>
             <div>Kullanıcı Adı</div>
           </b>
@@ -38,13 +57,13 @@ const Yonetici = (props) => {
           <b>
             <div>Şifre</div>
           </b>
-
-          <input className="yonetici-sifre" type="password"></input>
+          <input className="yonetici-sifre" type="password" onChange={sifreKaydet}></input>
         </div>
-        <button className="yonetici-button">Giriş Yap</button>
+        <button className="yonetici-button" onClick={yoneticiGirisiYap}>
+          Giriş Yap
+        </button>
       </div>
       <div className="kart">{satilanBiletler}</div>
-      {/* <Biletler biletler={props.biletler} setBiletler={props.setBiletler} /> */}
     </div>
   );
 };
