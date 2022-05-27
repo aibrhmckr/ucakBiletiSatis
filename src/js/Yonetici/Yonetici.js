@@ -21,7 +21,7 @@ const Yonetici = (props) => {
   props.biletler.map((bilet) =>
     satilanBiletler.push(<Biletler bilet={bilet} />)
   );*/
-/////////////////////
+  /////////////////////
   const satilanBiletler = [];
   const yoneticiGirisiYap = () => {
     //console.log("tıklandı");
@@ -35,12 +35,15 @@ const Yonetici = (props) => {
       }
     });
   };
+  const yoneticiCikisYap=()=>{
+    props.setYoneticiGiris(false)
+  }
   if (props.yoneticiGiris === true) {
     props.biletler.map((bilet) =>
       satilanBiletler.push(<Biletler bilet={bilet} />)
     );
   }
-//////////////
+  //////////////
   return (
     <div className="yonetici">
       <div className="yonetici-giris">
@@ -57,11 +60,19 @@ const Yonetici = (props) => {
           <b>
             <div>Şifre</div>
           </b>
-          <input className="yonetici-sifre" type="password" onChange={sifreKaydet}></input>
+          <input
+            className="yonetici-sifre"
+            type="password"
+            onChange={sifreKaydet}
+          ></input>
         </div>
-        <button className="yonetici-button" onClick={yoneticiGirisiYap}>
-          Giriş Yap
-        </button>
+        {props.yoneticiGiris === false ? (
+          <button className="yonetici-button" onClick={yoneticiGirisiYap}>
+            Giriş Yap
+          </button>
+        ) : (
+          <button className="yonetici-button" onClick={yoneticiCikisYap}>Çıkış Yap</button>
+        )}
       </div>
       <div className="kart">{satilanBiletler}</div>
     </div>

@@ -24,10 +24,20 @@ const Kart = (props) => {
    çalışıyoruz */
   const [koltukNumara, setKoltukNumara] = useState(0);
 
-  //console.log(koltukNumara)
+  // let yolculukMarkasi;
+  //   if(props.yolculukRota.Marka ==="Pegasus Airlines"){
+  //     yolculukMarkasi="../css/pegasus.png"
+  //   }
+  //   else if(props.yolculukRota.Marka ==="Türk Hava Yolları"){
+  //     yolculukMarkasi="../css/thy.png"
+  //   }
+  //   else if(props.yolculukRota.Marka ==="Anadolu Jet"){
+  //     yolculukMarkasi="../css/anadoluJet.png"
+  //   }
   return (
     <div className="sefer-kart">
       <div className="resim">
+
         <div>
           {props.yolculukRota.Marka}
           <br />
