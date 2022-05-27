@@ -151,9 +151,8 @@ export default class KartBilgileri extends React.Component {
 
                   this.props.setBiletler([
                     ...this.props.biletler,
-                    { PNR: Math.round(Math.random() * 1000), bilet },
+                    { PNR: Math.round(Math.random() * 1000), bilet:bilet },
                   ]);
-                 // console.log(this.props.biletler)
                 }}
               >
                 Ödeme <b className="ok">&#8594;</b>

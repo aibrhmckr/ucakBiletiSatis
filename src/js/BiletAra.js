@@ -165,10 +165,6 @@ const BiletAra = (props) => {
               className="yer"
               onChange={havalimanisec}
               options={havaalanlari}
-              // value={{
-              //   value: "İstanbul Sabiha Gökçen Havalimanı",
-              //   label: "İstanbul Sabiha Gökçen Havalimanı",
-              // }}
             />
           </div>
 
@@ -180,10 +176,6 @@ const BiletAra = (props) => {
               className="yer"
               onChange={inisHavalimaniSec}
               options={havaalanlari}
-              // value={{
-              //   value: "Ordu - Giresun Havalimanı",
-              //   label: "Ordu - Giresun Havalimanı",
-              // }}
             />
           </div>
         </div>
@@ -210,12 +202,15 @@ const BiletAra = (props) => {
             Uçak Bileti Bul &#8594;
           </button>
         </div>
-
-        {/* <ScrollDialog></ScrollDialog> */}
       </form>
 
       {ucuslarEkrani === true ? (
-        <Ucuslar yolculukRota={seyehat} secilenUcus={props.secilenUcus} setSecilenUcus={props.setSecilenUcus}></Ucuslar>
+        <Ucuslar
+          yolculukRota={seyehat}
+          secilenUcus={props.secilenUcus}
+          setSecilenUcus={props.setSecilenUcus}
+          biletler={props.biletler}
+        ></Ucuslar>
       ) : (
         <form> Sefer arayın </form>
       )}

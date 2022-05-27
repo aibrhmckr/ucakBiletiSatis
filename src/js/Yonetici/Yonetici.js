@@ -16,6 +16,10 @@ const Yonetici = (props) => {
 
   const ucus = seferler.find((x) => x.id === props.secilenUcus?.ucusID);
 
+  const satilanBiletler = [];
+  props.biletler.map((bilet) => satilanBiletler.push(<Biletler bilet={bilet}/>));
+  
+  
   return (
     <div className="yonetici">
       <div className="yonetici-giris">
@@ -39,7 +43,8 @@ const Yonetici = (props) => {
         </div>
         <button className="yonetici-button">Giriş Yap</button>
       </div>
-      <Biletler biletler={props.biletler} setBiletler={props.setBiletler} />
+      <div className="kart">{satilanBiletler}</div>
+      {/* <Biletler biletler={props.biletler} setBiletler={props.setBiletler} /> */}
     </div>
   );
 };

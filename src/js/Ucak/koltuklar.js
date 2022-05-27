@@ -39,22 +39,19 @@ export default function ScrollDialog(props) {
   let temp2 = [];
   for (let i = 1; i < props.yolculukKapasite; i++) {
     temp2.push(<Koltuk numara={i} koltukSec={secilenKoltuk=>setSecilenKoltuk(secilenKoltuk)} 
-    disabled={props.secilenUcus?.ucusID==props.ucusID && props.secilenUcus?.satinalindi==true && i==props.secilenUcus?.secilenKoltuk}/>);
-    if (i % 4 === 0) {
+    disabled={
+      props.secilenUcus?.ucusID==props.ucusID && 
+      props.secilenUcus?.satinalindi==true && 
+      i==props.secilenUcus?.secilenKoltuk
+      //Yonetici.js ye bak
+    }/>);
+    
+      if (i % 4 === 0) {
       temp.push(<div className="lar">{temp2}</div>);
       temp2 = [];
-      //console.log(i);
-      //console.log("//////")
+
     }
   }  
-  // useEffect(() => {
-  //         console.log("sa")
-
-  
-  //   return () => {
-  //   }
-  // }, [])
-  
   return (
     <div>
       <Button onClick={handleClickOpen("paper")}>Koltuk Seç</Button>

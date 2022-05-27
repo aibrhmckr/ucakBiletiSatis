@@ -9,31 +9,37 @@ import "./css/AppJS.css";
 // import { seferler } from "./js/Seferler";
 
 function App() {
-   const biletim=[]
+  const biletim = [];
   const [secilenUcus, setSecilenUcus] = useState();
   const [iletisim, setIletisim] = useState();
   const [yolcuBilgi, setYolcuBilgi] = useState();
   const [biletler, setBiletler] = useState(biletim);
 
-  //console.clear()
-  //console.log(biletler);
+  console.clear();
+  console.log(biletler);
 
   return (
     <div className="ekran">
       <div className="ekran-sol">
-        <BiletAra secilenUcus={secilenUcus} setSecilenUcus={setSecilenUcus} />
+        <BiletAra
+          secilenUcus={secilenUcus}
+          setSecilenUcus={setSecilenUcus}
+          biletler={biletler}
+        />
         <IletisimBilgileri iletisim={iletisim} setIletisim={setIletisim} />
         <YolcuBilgileri yolcuBilgi={yolcuBilgi} setYolcuBilgi={setYolcuBilgi} />
       </div>
       <div className="ekran-sag">
-        <KartBilgileri
-          secilenUcus={secilenUcus}
-          setSecilenUcus={setSecilenUcus}
-          iletisim={iletisim}
-          yolcuBilgi={yolcuBilgi}
-          biletler={biletler}
-          setBiletler={setBiletler}
-        />
+        <div className="kredi-karti__yonetic-al">
+          <KartBilgileri
+            secilenUcus={secilenUcus}
+            setSecilenUcus={setSecilenUcus}
+            iletisim={iletisim}
+            yolcuBilgi={yolcuBilgi}
+            biletler={biletler}
+            setBiletler={setBiletler}
+          />
+        </div>
       </div>
       <div>
         <Yonetici
@@ -44,7 +50,6 @@ function App() {
           setBiletler={setBiletler}
         />
       </div>
-      <button>Yazdır</button>
     </div>
   );
 }

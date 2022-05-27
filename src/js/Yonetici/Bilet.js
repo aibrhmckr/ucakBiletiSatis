@@ -1,36 +1,33 @@
 import { seferler } from "../Seferler";
+import "./Bilet.css";
 
 const Bilet = (props) => {
   //console.log("----------",props.secilenUcus, props.iletisim, props.yolcuBilgi);
   //
   return (
-    <div>
-        {/* <label>{seferler[props.secilenUcus?.ucusID]?.Marka}</label> <br/>
-      <label className="Adim">{props.yolcuBilgi?.ad}</label>
-      <label className="Soyadim"> {props.yolcuBilgi?.soyad}</label>
-      <br />
-      <label className="kalkisH">
-        {seferler[props.secilenUcus?.ucusID]?.KHavaalani}
-      </label>
-      <br />
-      <label className="inisH">
-        {seferler[props.secilenUcus?.ucusID]?.IHavaalani}
-      </label>
-      <br />
-      <label className="pnr">{}</label>
-      <br />
-      <label className="koltugum">{props.secilenUcus?.secilenKoltuk}</label>
-      <br />
-      <label className="tarhim">
-        {seferler[props.secilenUcus?.ucusID]?.KalkisTarih}&#8594;
-        {seferler[props.secilenUcus?.ucusID]?.InisTarih}
-      </label>
-      <br />
-      <label className="kalkis-inis__saat">{seferler[props.secilenUcus?.ucusID]?.KSaat } &#8594; {seferler[props.secilenUcus?.ucusID]?.ISaat}</label>
-      <br />
-      <button className="iptal-button">İptal Et</button>
-      <br /> */}
-      <label>{props.bilet?.Marka}</label> <br/>
+    <div className="kart">
+      <div>
+        <label>{props.bilet?.bilet?.marka}</label> <br />
+        <div className="ad-soyad">
+          <label className="Adim">{props.bilet?.bilet?.ad}</label>
+          <label className="Soyadim">{props.bilet?.bilet?.soyad}</label>
+        </div>
+        <div className="nerden-nereye">
+          <label className="kalkisH">{props.bilet?.bilet?.KHavaalani}</label>
+          <label className="inisH">{props.bilet?.bilet?.IHavaalani}</label>
+        </div>
+        <label className="pnr">{props.bilet?.PNR}</label>
+        <label className="koltugum">{props.bilet?.bilet?.koltuk}</label>
+        <div className="tarhim">
+          <label className="KTarhim">{props.bilet?.bilet?.KalkisTarih}</label>
+          &#8594;
+          <label className="ITarhim">{props.bilet?.bilet?.InisTarih}</label>
+        </div>
+        <label className="kalkis-inis__saat">
+          {props.bilet?.bilet?.KSaat} &#8594; {props.bilet?.bilet?.ISaat}
+        </label>
+        <button className="iptal-button">İptal Et</button>
+      </div>
     </div>
   );
 };

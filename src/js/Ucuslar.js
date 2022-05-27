@@ -22,10 +22,13 @@ const Ucuslar = (props) => {
   
   return (
     <div className="ucus-liste">
+      
       <UcusKart
         ucusSeferleri={secili}
         ucusKapasite={seciliUcakYolcu}
-        secilenUcus={props.secilenUcus} setSecilenUcus={props.setSecilenUcus}
+        secilenUcus={props.secilenUcus} 
+        setSecilenUcus={props.setSecilenUcus}
+        biletler={props.biletler}
       ></UcusKart>
     </div>
   );
