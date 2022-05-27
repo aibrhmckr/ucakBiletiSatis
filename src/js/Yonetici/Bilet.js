@@ -6,7 +6,8 @@ const Bilet = (props) => {
   //
   return (
     <div className="kart">
-      <div>
+      <div className="iptal-et">
+        <div className="iptal-butonu-disi">
         <label>{props.bilet?.bilet?.marka}</label> <br />
         <div className="ad-soyad">
           <label className="Adim-Soyadim">{props.bilet?.bilet?.ad} {props.bilet?.bilet?.soyad}</label>
@@ -23,10 +24,11 @@ const Bilet = (props) => {
           <label className="KTarhim">{props.bilet?.bilet?.KalkisTarih}</label>
           &#8594;
           <label className="ITarhim">{props.bilet?.bilet?.InisTarih}</label>
-        </div><br />
+        </div>
         <label className="kalkis-inis__saat">
           {props.bilet?.bilet?.KSaat} &#8594; {props.bilet?.bilet?.ISaat}
         </label><br />
+        </div>
         <button className="iptal-button">İptal Et</button><br />
       </div>
     </div>

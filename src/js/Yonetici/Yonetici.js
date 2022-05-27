@@ -35,9 +35,9 @@ const Yonetici = (props) => {
       }
     });
   };
-  const yoneticiCikisYap=()=>{
-    props.setYoneticiGiris(false)
-  }
+  const yoneticiCikisYap = () => {
+    props.setYoneticiGiris(false);
+  };
   if (props.yoneticiGiris === true) {
     props.biletler.map((bilet) =>
       satilanBiletler.push(<Biletler bilet={bilet} />)
@@ -71,10 +71,12 @@ const Yonetici = (props) => {
             Giriş Yap
           </button>
         ) : (
-          <button className="yonetici-button" onClick={yoneticiCikisYap}>Çıkış Yap</button>
+          <button className="yonetici-button" onClick={yoneticiCikisYap}>
+            Çıkış Yap
+          </button>
         )}
       </div>
-      <div className="kart">{satilanBiletler}</div>
+      <div >{satilanBiletler}</div>
     </div>
   );
 };
