@@ -51,7 +51,6 @@ const Yonetici = (props) => {
           <b>
             <div>Kullanıcı Adı</div>
           </b>
-
           <input className="yonetici-kAdi" onChange={kullaniciAdiKaydet} />
         </div>
         <div>
@@ -70,7 +69,7 @@ const Yonetici = (props) => {
           </button>
         ) : (
           <button className="yonetici-button" onClick={yoneticiCikisYap}>
-            Çıkış Yap
+            Çıkış Yap 
           </button>
         )}
       </div>
