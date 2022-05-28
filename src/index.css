@@ -12,6 +12,9 @@ html {
 body {
   margin: 0;
   background-color: white;
-  background-image: url(./css/sky.jpg);
+  background-image: url(./css/giresunGokyuzu.jpg);
+  /**/
+  background-repeat: no-repeat;
+  background-size: 100% 145%;
 }
 

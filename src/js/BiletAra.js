@@ -198,7 +198,9 @@ const BiletAra = (props) => {
             className="bilet-bul"
             type="submit"
             onClick={ucuslarEkraniGoster}
+            role="button"
           >
+            
             Uçak Bileti Bul &#8594;
           </button>
         </div>

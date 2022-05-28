@@ -28,9 +28,7 @@ const Bilet = (props) => {
           {props.bilet?.bilet?.KSaat} &#8594; {props.bilet?.bilet?.ISaat}
         </label><br />
         </div>
-        <button className="iptal-button" onClick={()=>{
-         
-        }}>İptal Et</button><br />
+        <button className="iptal-button" onClick={()=>{}}>İptal Et</button><br />
       </div>
     </div>
   );

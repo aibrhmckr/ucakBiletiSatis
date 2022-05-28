@@ -51,10 +51,8 @@ const Yonetici = (props) => {
           <b>
             <div>Kullanıcı Adı</div>
           </b>
-          <TextField
-            className="yonetici-kAdi"
-            onChange={kullaniciAdiKaydet}
-          ></TextField>
+
+          <input className="yonetici-kAdi" onChange={kullaniciAdiKaydet} />
         </div>
         <div>
           <b>
@@ -76,7 +74,7 @@ const Yonetici = (props) => {
           </button>
         )}
       </div>
-      <div >{satilanBiletler}</div>
+      <div>{satilanBiletler}</div>
     </div>
   );
 };

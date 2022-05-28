@@ -38,11 +38,12 @@ export default function ScrollDialog(props) {
   const temp = [];
   let temp2 = [];
   for (let i = 1; i < props.yolculukKapasite; i++) {
+    
     temp2.push(<Koltuk numara={i} koltukSec={secilenKoltuk=>setSecilenKoltuk(secilenKoltuk)} 
     disabled={
-      props.secilenUcus?.ucusID==props.ucusID && 
-      props.secilenUcus?.satinalindi==true && 
-      i==props.secilenUcus?.secilenKoltuk
+      props.secilenUcus?.ucusID===props.ucusID &&// 
+      props.secilenUcus?.satinalindi===true && 
+      i===props.secilenUcus?.secilenKoltuk
       //Yonetici.js ye bak
     }/>);
     
