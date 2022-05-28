@@ -31,8 +31,8 @@ function App() {
     ISaat: seferler[secilenUcus?.ucusID]?.ISaat,
   }
   return (
-    <div className="ekran">
-      <div className="ekran-sol">
+    <div className="ekran" >
+      <div className="ekran-sol" >
         <BiletAra
           secilenUcus={secilenUcus}
           setSecilenUcus={setSecilenUcus}

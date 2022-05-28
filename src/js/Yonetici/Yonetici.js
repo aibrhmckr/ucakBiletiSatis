@@ -64,11 +64,13 @@ const Yonetici = (props) => {
           ></input>
         </div>
         {props.yoneticiGiris === false ? (
-          <button className="yonetici-button" onClick={yoneticiGirisiYap}>
+          <button className="yonetici-button" 
+          onClick={yoneticiGirisiYap}>
             Giriş Yap
           </button>
         ) : (
-          <button className="yonetici-button" onClick={yoneticiCikisYap}>
+          <button className="yonetici-button" 
+          onClick={yoneticiCikisYap}>
             Çıkış Yap 
           </button>
         )}
