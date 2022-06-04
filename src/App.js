@@ -1,8 +1,7 @@
 import BiletAra from "./js/BiletAra";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import IletisimBilgileri from "./js/KullanıcıBilgiAl/IletisimBilgileri/IletisimBilgileri";
 import YolcuBilgileri from "./js/KullanıcıBilgiAl/YolcuBilgileri/YolcuBilgileri";
-import Box from "@mui/material/Box";
 import KartBilgileri from "./js/KullanıcıBilgiAl/Odeme/KartBilgileri";
 import Yonetici from "./js/Yonetici/Yonetici";
 import "./css/AppJS.css";
@@ -16,7 +15,7 @@ function App() {
   const [biletler, setBiletler] = useState(biletim);
   const [yoneticiGiris,setYoneticiGiris]=useState(false)
   //console.clear();
-  console.log(biletler);
+  console.log(iletisim);
   const bilet={
     ucusID:secilenUcus?.ucusID,
     marka:seferler[secilenUcus?.ucusID]?.Marka,

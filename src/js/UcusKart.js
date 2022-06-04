@@ -37,6 +37,8 @@ const Kart = (props) => {
           {props.yolculukRota.KSaat} &#8594; {props.yolculukRota.ISaat}
         </div>
       </div>
+      <div className="fiyat-button">
+      {props.yolculukRota.Fiyat}₺
       <Koltuklar
         yolculukKapasite={kapasite}
         secilenKoltuk={(koltukNumara) => setKoltukNumara(koltukNumara)}
@@ -45,6 +47,8 @@ const Kart = (props) => {
         setSecilenUcus={props.setSecilenUcus}
         biletler={props.biletler}
       />
+      </div>
+      
       {/*{koltukNumara!==null ? (<button>İlerle</button>):(<div/>)}*/}
     </div>
   );

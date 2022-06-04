@@ -76,6 +76,7 @@ export default class KartBilgileri extends React.Component {
       KSaat: seferler[this.props.secilenUcus?.ucusID]?.KSaat,
       ISaat: seferler[this.props.secilenUcus?.ucusID]?.ISaat,
     };
+    //  let email="https://formsubmit.co/"+this.props?.iletisim?.eposta
     return (
       <div key="Payment">
         <div className="App-payment">
@@ -151,7 +152,7 @@ export default class KartBilgileri extends React.Component {
 
                   this.props.setBiletler([
                     ...this.props.biletler,
-                    { PNR: Math.round(Math.random() * 1000), bilet:bilet },
+                    { PNR: Math.round(Math.random() * 1000), bilet: bilet },
                   ]);
                 }}
               >

@@ -181,7 +181,7 @@ const PegasusAirlines = [
       ISaat: "10:30",
       KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
       IHavaalani: "Ordu - Giresun Havalimanı",
-      Fiyat: 639.98,
+      Fiyat: 780,
       ucak: THY[12],
       yolcuSayisi: PegasusAirlines[2].yolcuKapasitesi,
     },
