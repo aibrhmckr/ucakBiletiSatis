@@ -41,7 +41,10 @@ const Yonetici = (props) => {
   };
   if (props.yoneticiGiris === true) {
     props.biletler.map((bilet) =>
-      satilanBiletler.push(<Biletler bilet={bilet} />)
+      satilanBiletler.push(<Biletler bilet={bilet} 
+        biletler={props.biletler}
+        setBiletler={props.setBiletler}
+        />)
     );
   }
   //////////////
