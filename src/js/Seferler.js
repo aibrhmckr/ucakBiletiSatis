@@ -161,8 +161,8 @@ const PegasusAirlines = [
     {
       id: 0,
       Marka: ucusFirmaUcaklar[0].Marka,
-      KalkisTarih: "2022-06-01",
-      InisTarih: "2022-06-01",
+      KalkisTarih: "2022-06-20",
+      InisTarih: "2022-06-20",
       KSaat: "07:30",
       ISaat: "09:30",
       KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
@@ -175,8 +175,8 @@ const PegasusAirlines = [
       id: 1,
 
       Marka: ucusFirmaUcaklar[1].Marka,
-      KalkisTarih: "2022-05-18",
-      InisTarih: "2022-05-18",
+      KalkisTarih: "2022-06-18",
+      InisTarih: "2022-06-18",
       KSaat: "09:00",
       ISaat: "10:30",
       KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
@@ -189,7 +189,7 @@ const PegasusAirlines = [
       id: 2,
 
       Marka: ucusFirmaUcaklar[2].Marka,
-      KalkisTarih: "2022-05-18",
+      KalkisTarih: "2022-06-20",
       InisTarih: "2022-05-18",
       KSaat: "12:00",
       ISaat: "13:30",
@@ -203,8 +203,8 @@ const PegasusAirlines = [
       id: 3,
 
       Marka: ucusFirmaUcaklar[1].Marka,
-      KalkisTarih: "2022-06-01",
-      InisTarih: "2022-06-01",
+      KalkisTarih: "2022-06-20",
+      InisTarih: "2022-06-20",
       KSaat: "15:00",
       ISaat: "16:30",
       KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",
@@ -217,8 +217,8 @@ const PegasusAirlines = [
       id: 4,
 
       Marka: ucusFirmaUcaklar[0].Marka,
-      KalkisTarih: "2022-05-18",
-      InisTarih: "2022-05-18",
+      KalkisTarih: "2022-06-18",
+      InisTarih: "2022-06-18",
       KSaat: "20:15",
       ISaat: "21:45",
       KHavaalani: "İstanbul Sabiha Gökçen Havalimanı",

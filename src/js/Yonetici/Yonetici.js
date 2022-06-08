@@ -33,7 +33,8 @@ const Yonetici = (props) => {
           //console.log("giriş yapildi");
         }
       }
-    });
+    }); 
+    //if(props.yoneticiGiris===false) alert("Kullanıcı adı veya şifre hatalı")
   };
   const yoneticiCikisYap = () => {
     props.setYoneticiGiris(false);

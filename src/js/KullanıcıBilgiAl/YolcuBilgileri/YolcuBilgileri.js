@@ -73,7 +73,7 @@ useEffect(() => {
             type="date"
             className="tarih"
             onChange={dogumTarihiKaydet}
-            defaultValue="2000-07-09"
+            // defaultValue="2000-07-09"
           ></input>
         </div>
 
@@ -88,6 +88,7 @@ useEffect(() => {
             inputMode="numeric"
             maxLength="11"
             onChange={TCKaydet}
+            
           ></input>
         </div>
         {/* üst */}
