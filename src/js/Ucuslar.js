@@ -1,6 +1,5 @@
 import UcusKart from "./UcusKart";
 import "../css/Ucuslar.css";
-import { useState } from "react";
 import { seferler } from "./Seferler";
 
 const Ucuslar = (props) => {

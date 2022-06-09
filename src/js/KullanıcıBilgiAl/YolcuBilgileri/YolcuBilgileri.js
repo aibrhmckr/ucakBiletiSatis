@@ -17,12 +17,8 @@ const YolcuBilgileri = (props) => {
   const TCKaydet = (event) => {
     setTcKimlik(event.target.value);
   };
-//////////////////////////////////////////////////
   const [cinsiyetim,setcinsiyetim]=useState("Seçilmedi");
-  //console.log(cinsiyetim)
-/////////////////////////////////////////////////
-
-
+  
   const [dogumT, setDogumT] = useState(null);
   const dogumTarihiKaydet = (event) => {
     setDogumT(event.target.value);

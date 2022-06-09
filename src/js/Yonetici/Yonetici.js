@@ -17,28 +17,20 @@ const Yonetici = (props) => {
 
   const ucus = seferler.find((x) => x.id === props.secilenUcus?.ucusID);
 
-  /*const satilanBiletler = [];
-  props.biletler.map((bilet) =>
-    satilanBiletler.push(<Biletler bilet={bilet} />)
-  );*/
-  /////////////////////
-  const satilanBiletler = [];
   const yoneticiGirisiYap = () => {
-    //console.log("tıklandı");
     yoneticiler.forEach((yonetici) => {
-      //console.log("gezildi");
       if (yonetici.kAdi === kullaniciAdi) {
         if (yonetici.sifre === sifre) {
           props.setYoneticiGiris(true);
-          //console.log("giriş yapildi");
         }
       }
     }); 
-    //if(props.yoneticiGiris===false) alert("Kullanıcı adı veya şifre hatalı")
   };
+
   const yoneticiCikisYap = () => {
     props.setYoneticiGiris(false);
   };
+  const satilanBiletler = [];
   if (props.yoneticiGiris === true) {
     props.biletler.map((bilet) =>
       satilanBiletler.push(<Biletler bilet={bilet} 

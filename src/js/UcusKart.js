@@ -19,9 +19,6 @@ const UcusKart = (props) => {
 const Kart = (props) => {
   let kapasite = props.yolculukKapasite;
 
-  //
-  /* Burada secilen koltuğun numarasını alt ekemandan almaya 
-   çalışıyoruz */
   const [koltukNumara, setKoltukNumara] = useState(0);
 
   return (
@@ -43,6 +40,7 @@ const Kart = (props) => {
         yolculukKapasite={kapasite}
         secilenKoltuk={(koltukNumara) => setKoltukNumara(koltukNumara)}
         ucusID={props.yolculukRota.id}
+        
         secilenUcus={props.secilenUcus}
         setSecilenUcus={props.setSecilenUcus}
         biletler={props.biletler}
