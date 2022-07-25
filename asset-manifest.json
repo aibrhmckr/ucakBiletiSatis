@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ucakBiletiSatis/static/css/main.c4b2c7ab.chunk.css",
+    "main.js": "/ucakBiletiSatis/static/js/main.9bc8e7a7.chunk.js",
+    "main.js.map": "/ucakBiletiSatis/static/js/main.9bc8e7a7.chunk.js.map",
+    "runtime-main.js": "/ucakBiletiSatis/static/js/runtime-main.ed3ced02.js",
+    "runtime-main.js.map": "/ucakBiletiSatis/static/js/runtime-main.ed3ced02.js.map",
+    "static/css/2.727685ba.chunk.css": "/ucakBiletiSatis/static/css/2.727685ba.chunk.css",
+    "static/js/2.27d7d316.chunk.js": "/ucakBiletiSatis/static/js/2.27d7d316.chunk.js",
+    "static/js/2.27d7d316.chunk.js.map": "/ucakBiletiSatis/static/js/2.27d7d316.chunk.js.map",
+    "index.html": "/ucakBiletiSatis/index.html",
+    "static/css/2.727685ba.chunk.css.map": "/ucakBiletiSatis/static/css/2.727685ba.chunk.css.map",
+    "static/css/main.c4b2c7ab.chunk.css.map": "/ucakBiletiSatis/static/css/main.c4b2c7ab.chunk.css.map",
+    "static/js/2.27d7d316.chunk.js.LICENSE.txt": "/ucakBiletiSatis/static/js/2.27d7d316.chunk.js.LICENSE.txt",
+    "static/media/koltuklar.css": "/ucakBiletiSatis/static/media/chair-cinema-movie-seat-theater-icon-68620 kopya.4a26a83f.png",
+    "static/media/index.css": "/ucakBiletiSatis/static/media/sky.e39dfc87.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ed3ced02.js",
+    "static/css/2.727685ba.chunk.css",
+    "static/js/2.27d7d316.chunk.js",
+    "static/css/main.c4b2c7ab.chunk.css",
+    "static/js/main.9bc8e7a7.chunk.js"
+  ]
+}
